@@ -120,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -136,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -149,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -202,42 +201,21 @@ body {
       <div class="metric-change down">▼ 38.4% vs last week</div>
     </div></div>
     
-    <div class="summary-text">Blended ROAS is 2.00x this week, below the 2.5x target. Blended CPA is $28 against the dynamic target of $19 — both metrics are off, driven by a significant drop in orders (80 vs 119 last week) on slightly higher spend. True AOV jumped from $39 to $48, which is a positive structural signal, but it wasn&#39;t enough to offset the volume decline.</div>
+    <div class="summary-text">CVR collapse is the week&#39;s core problem — CVR dropped from 5.3% last week to 3.3% this week on higher spend. Orders fell from 119 to 80. This isn&#39;t a creative reach problem — Meta is generating clicks and Google is generating search volume. Something in the post-click experience degraded, or the audience mix shifted toward lower-intent traffic. Worth checking if any landing page changes went live this week.</div>
     
-      <h3 style="margin-top:24px;">Channel Breakdown</h3>
-      <table class="channel-table">
-        <thead><tr><th>Channel</th><th>Revenue</th><th>Spend</th><th>ROAS</th><th>CPA</th></tr></thead>
-        <tbody><tr><td>Facebook Ads</td><td>$1,221 <span class="channel-delta down">▼ 31.9%</span></td><td>$1,050 <span class="channel-delta down">▼ 3.2%</span></td><td>1.16x <span class="channel-delta down">▼ 29.7%</span></td><td>$45.63 <span class="channel-delta up">▼ 11.6%</span></td></tr><tr><td>Google Ads</td><td>$2,760 <span class="channel-delta up">▲ 22.6%</span></td><td>$1,133 <span class="channel-delta up">▲ 17.8%</span></td><td>2.43x <span class="channel-delta up">▲ 4.1%</span></td><td>$35.42 <span class="channel-delta up">▼ 0.6%</span></td></tr></tbody>
-      </table>
   </div>
 
   
     <div class="section">
       <h2>Meta Overview</h2>
       <div class="platform-overview">
-        <div class="po-grid">
-    <div class="po-metric">
-      <div class="po-metric-label">Spend</div>
-      <div><span class="po-metric-value">$1,050</span><span class="po-metric-delta down">↓ 3.2%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">ROAS</div>
-      <div><span class="po-metric-value">1.16x</span><span class="po-metric-delta down">↓ 29.7%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">CPA</div>
-      <div><span class="po-metric-value">$45.63</span><span class="po-metric-delta up">↓ 11.6%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">Avg Freq</div>
-      <div><span class="po-metric-value">3.6</span></div>
-    </div></div>
+        <div class="po-grid"></div>
         <div class="po-summary"><strong>Week summary:</strong> Meta spent $1,050 and generated $1,221 in attributed revenue across 23 orders. Account-level frequency is at 3.6 — the audience is being served these creatives heavily, and it shows in the numbers. One ad (352 A) is absorbing more than half the channel&#39;s spend and returning well below breakeven on direct attribution. The channel is doing prospecting work but the creative mix isn&#39;t converting efficiently this week.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card review">
+    <div class="ad-card winner">
       <div class="ad-header">
-        <div><span class="ad-name">359 A | UGC</span><span class="ad-tag review">STRONGEST SIGNALS</span></div>
+        <div><span class="ad-name">359 A | UGC</span><span class="ad-tag winner">STRONGEST SIGNALS</span></div>
         <div class="ad-links"><a href="https://fb.me/25acRid3kQslppq" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243979655060266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$101.48</strong> Spend</span><span class="ad-metric"><strong>2.17x</strong> ROAS</span><span class="ad-metric"><strong>$33.83</strong> CPA</span><span class="ad-metric"><strong>1.8</strong> Frequency</span><span class="ad-metric"><strong>1.18%</strong> CTR</span></div>
@@ -362,73 +340,10 @@ body {
       <div class="insight-label">Repeatable insight</div>
       <div class="insight-body">The ad copy framing — leading with the lifestyle benefit (&#39;adventures don&#39;t have to stop&#39;) rather than the product mechanic — is outperforming the branded aggregate on both CTR and ROAS. This angle is worth testing in Meta creative as well.</div>
     </div></div>
-    </div></div><div class="section"><h2>Google — Ads to Review</h2>
-    <div class="ad-card critical">
-      <div class="ad-header">
-        <div><span class="ad-name">DG | TP — s1</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
-        <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=2167988621&amp;campaignId=23725660034" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$105.17</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>2.50%</strong> CTR</span></div>
-      
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Unclear. CTR of 2.5% is moderate, impressions are 2,437. Without keyword-level data it&#39;s hard to classify — could be non-branded search or display. Zero conversions on $105 spend (5.5× the dynamic target) makes this a full-analysis underperformer.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Diagnosis</div>
-      <div class="insight-body">Zero attributed orders on $105.17 spend — well past the full-analysis threshold of 5× the $19 dynamic target. CTR of 2.5% means clicks are happening, but nothing is converting. This is either a keyword/audience mismatch or a post-click issue specific to this traffic source.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s not working</div>
-      <div class="insight-body">Clicks without any conversion signal after $105 spent is a clear flag. The landing page experience for this traffic may not be aligned with the intent of the query driving these clicks.</div>
-    </div></div>
-    </div>
-    <div class="ad-card critical">
-      <div class="ad-header">
-        <div><span class="ad-name">DG | TP — s2</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
-        <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=2167988621&amp;campaignId=23725660034" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$72.01</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>1.79%</strong> CTR</span></div>
-      
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Unclear — same campaign as s1, similar signals. Non-branded search or display with no conversion data to anchor funnel placement.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Diagnosis</div>
-      <div class="insight-body">Zero attributed orders on $72 spend — just under the 5× full-analysis threshold at 3.8× the dynamic target, so this is provisional. But combined with s1, the DG | TP campaign has spent $177 with zero conversions. The pattern across both variants is consistent enough to flag.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s not working</div>
-      <div class="insight-body">Both s1 and s2 in this campaign are spending without converting. The campaign-level pattern is more informative than either ad in isolation — worth reviewing keyword targeting and match types at the campaign level.</div>
-    </div></div>
-    </div>
-    <div class="ad-card critical">
-      <div class="ad-header">
-        <div><span class="ad-name">DG | R | TP — dynamic 2</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
-        <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=2167988621&amp;campaignId=23714884043" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$69.03</strong> Spend</span><span class="ad-metric"><strong>0.88x</strong> ROAS</span><span class="ad-metric"><strong>$69.03</strong> CPA</span><span class="ad-metric"><strong>4.46%</strong> CTR</span></div>
-      
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Likely retargeting or remarketing given the campaign name (DG | R | TP). CTR of 4.46% is high, consistent with a warm audience. CPM implied from spend/impressions is around $20, which also fits.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Diagnosis</div>
-      <div class="insight-body">1 attributed order on $69.03 spend — CPA of $69.03 against the $19 dynamic target. Spend is at 3.6× the dynamic target (provisional range). CTR is strong at 4.46%, suggesting the audience is engaged, but conversion isn&#39;t following. A retargeting campaign with high CTR and low conversion is a post-click problem.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s not working</div>
-      <div class="insight-body">Warm audience clicking but not converting points to the landing page or offer not closing the loop. If this is retargeting, the page these users land on may not be differentiated enough from what they&#39;ve already seen.</div>
-    </div></div>
     </div></div><div class="section"><h2>Site-Level Flags</h2>
-    <div class="ad-card review">
+    <div class="ad-card critical">
       <div class="ad-header">
-        <div><span class="ad-name">352 A | UGC — Post-Click Leak</span><span class="ad-tag review">SITE-LEVEL FLAG</span></div>
+        <div><span class="ad-name">352 A | UGC</span><span class="ad-tag critical">Post-Click Leak — SITE-LEVEL FLAG</span></div>
         <div class="ad-links"><a href="https://fb.me/yzE9lbp5d6sK3Jg" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$555.83</strong> Spend</span><span class="ad-metric"><strong>0.50x</strong> ROAS</span><span class="ad-metric"><strong>$69.48</strong> CPA</span><span class="ad-metric"><strong>2.3</strong> Frequency</span><span class="ad-metric"><strong>1.60%</strong> CTR</span></div>
@@ -446,9 +361,9 @@ body {
       <div class="insight-label">Recommended owner conversation</div>
       <div class="insight-body">This ad is generating real engagement — people are watching and clicking. The conversion gap is large enough that the landing page experience deserves a direct review: check page load speed, offer clarity, and whether the creative&#39;s messaging (UGC tone, specific claim) is matched by what the landing page leads with. Also worth checking if AOV on this traffic is lower than account average, which could indicate a bundle or upsell gap.</div>
     </div></div>
-    </div></div>
+    </div></div><div class="section"><h2>Cole’s Random Thoughts</h2><div class="freeform-content"><h3 class="freeform-heading">Callout</h3><p>This is a test</p><h3 class="freeform-heading">Metric Grid</h3><table class="freeform-table"><thead><tr><th>Label</th><th>Value</th><th>Delta</th><th>Direction</th></tr></thead><tbody><tr><td>Hello</td><td>69</td><td>12.69%</td><td>up</td></tr><tr><td>Test 2</td><td>96</td><td>69.12%</td><td>down</td></tr></tbody></table><h3 class="freeform-heading">Card: My Title - WINNER</h3><p>Preview: https://fb.me/yzE9lbp5d6sK3Jg</p><p>Manager: https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266</p><h3 class="freeform-heading">Primary Metrics</h3><table class="freeform-table"><thead><tr><th>Label</th><th>Value</th></tr></thead><tbody><tr><td>Spend</td><td>$555.83</td></tr><tr><td>ROAS</td><td>0.50x</td></tr><tr><td>CPA</td><td>$69.48</td></tr><tr><td>Frequency</td><td>2.3</td></tr><tr><td>CTR</td><td>1.60%</td></tr></tbody></table><h3 class="freeform-heading">Engagement Metrics</h3><table class="freeform-table"><thead><tr><th>Label</th><th>Value</th></tr></thead><tbody><tr><td>hook rate</td><td>23.3%</td></tr><tr><td>hold rate</td><td>37.8%</td></tr><tr><td>completion</td><td>23.3%</td></tr><tr><td>thruplay</td><td>5.6%</td></tr></tbody></table><p>This is sample text</p><h3 class="freeform-heading">Bold:</h3><p>This is sample text</p><h3 class="freeform-heading">Enter down twice</h3><p>Hello test</p></div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Meta frequency is at account-level saturation</strong>Account-level frequency on Meta is 3.6 this week. At that level, the audience has seen these creatives multiple times and engagement is declining across most ads. The 350 B adset is already showing frequency-driven CTR collapse at 3.8. With most of the creative set running broad, the pool is getting worn — new creative or audience expansion is needed to reset.</li><li><strong>Google branded search is carrying conversion this week</strong>The &#39;Adventures don&#39;t have to stop&#39; ad copy variant generated 16 orders at 3.93x ROAS — the strongest single ad in the account. The DG campaigns spent $177 combined with zero conversions. Google&#39;s efficiency this week is almost entirely a function of branded search performance, not the broader campaign structure.</li><li><strong>Strong Meta creative engagement isn&#39;t converting — post-click review needed</strong>The top Meta spender (352 A) has a 23.3% hook rate and 37.8% hold rate but a $69.48 CPA. The engagement signals say the creative is working; the conversion signals say something downstream isn&#39;t. This pattern — good creative metrics, poor purchase rate — points to the landing page or offer, not the ad itself.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Audit the landing page for 352 A traffic</strong>352 A spent $556 this week with strong engagement but a $69.48 CPA. Pull the post-click data for this ad specifically — page load time, scroll depth, add-to-cart rate. The creative is doing its job; find where the drop-off is happening.</div></div><div class="priority"><div class="priority-content"><strong>Reduce 352 A spend concentration or rotate in a new creative</strong>One ad absorbing 53% of Meta&#39;s budget and returning 0.50x ROAS is the single biggest lever on the account right now. Either redirect budget toward 359 A (the strongest Meta converter this week) or introduce a new creative variant in the 352 adset to test whether the issue is the creative or the audience.</div></div><div class="priority"><div class="priority-content"><strong>Review DG | TP campaign keyword targeting</strong>Both s1 and s2 in the DG | TP campaign spent $177 combined with zero attributed orders. Pull the search terms report — if broad match is pulling in irrelevant queries, tighten match types or add negatives before letting this spend continue.</div></div><div class="priority"><div class="priority-content"><strong>Test the &#39;Adventures don&#39;t have to stop&#39; angle on Meta</strong>This Google ad copy is the account&#39;s best-performing creative this week by ROAS and CTR. The lifestyle-benefit framing is worth adapting into a Meta UGC or static creative to see if the same angle resonates with cold audiences on that channel.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Audit the landing page for 352 A traffic</strong>352 A spent $556 this week with strong engagement but a $69.48 CPA. Pull the post-click data for this ad specifically — page load time, scroll depth, add-to-cart rate. The creative is doing its job; find where the drop-off is happening.</div></div><div class="priority"><div class="priority-content"><strong>Reduce 352 A spend concentration or rotate in a new creative</strong>One ad absorbing 53% of Meta&#39;s budget and returning 0.50x ROAS is the single biggest lever on the account right now. Either redirect budget toward 359 A (the strongest Meta converter this week) or introduce a new creative variant in the 352 adset to test whether the issue is the creative or the audience.</div></div><div class="priority"><div class="priority-content"><strong>Test the &#39;Adventures don&#39;t have to stop&#39; angle on Meta</strong>This Google ad copy is the account&#39;s best-performing creative this week by ROAS and CTR. The lifestyle-benefit framing is worth adapting into a Meta UGC or static creative to see if the same angle resonates with cold audiences on that channel.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • May 11–17, 2026</div>
 </div>
