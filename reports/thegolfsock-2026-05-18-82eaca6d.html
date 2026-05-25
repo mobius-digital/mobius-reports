@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -237,9 +234,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Meta is running broad prospecting at scale — $11,559 in spend with 572K impressions across a fresh audience (account-level frequency at 2.5x). Direct ROAS of 1.65x is up from 1.52x last week, and channel CPA improved from $52.57 to $48.16. Meta is doing pipeline-filling work at this budget level; the conversion credit flows downstream to branded search and retargeting.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">142 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">142 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/258UNtaMsvjWR6o" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=3217552185130501&amp;selected_ad_ids=120247087107760415" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$71.36</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>1.1</strong> Frequency</span><span class="ad-metric"><strong>2.99%</strong> CTR</span></div>
@@ -262,9 +259,9 @@ body {
       <div class="insight-body">Whatever is happening in the first 3 seconds of this video is working — isolate that opening hook and test it as the lead frame in sibling UGC creatives in the 141 and 141 adsets.</div>
     </div></div>
     </div>
-    <div class="ad-card review">
+    <div class="ad-card winner">
       <div class="ad-header">
-        <div><span class="ad-name">F3 | Still</span><span class="ad-tag review">STRONGEST SIGNALS</span></div>
+        <div><span class="ad-name">F3 | Still</span><span class="ad-tag winner">STRONGEST SIGNALS</span></div>
         <div class="ad-links"><a href="https://fb.me/1QRJRUoscGVokNf" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=3217552185130501&amp;selected_ad_ids=120236290277850415" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$3,238</strong> Spend</span><span class="ad-metric"><strong>2.40x</strong> ROAS</span><span class="ad-metric"><strong>$36.79</strong> CPA</span><span class="ad-metric"><strong>1.6</strong> Frequency</span><span class="ad-metric"><strong>1.14%</strong> CTR</span></div>
@@ -302,10 +299,6 @@ body {
     <div class="insight-block">
       <div class="insight-label">What&#39;s not working</div>
       <div class="insight-body">CPA of $56.96 is 90% above the $30 dynamic target. ROAS of 1.30x is well below the blended 2.5x threshold. At $2,791 in spend and 49 attributed orders, this ad has had ample data to prove itself and hasn&#39;t. The 124 adset&#39;s other variant (124 A | Still) shows a similar pattern at lower spend.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Test plan</div>
-      <div class="insight-body">This ad may be a hidden TOF contributor whose conversions Meta is crediting downstream, or it may be a creative that genuinely isn&#39;t landing — the engagement metrics aren&#39;t strong enough to tell us which from in-platform data alone. The test: pause for 7 days and monitor blended account CPA, ROAS, and spend pacing, plus the retargeting ads in the same funnel. If the account gets worse or downstream ads degrade, this ad was carrying weight that wasn&#39;t visible at the ad level — reactivate it. If account metrics hold or improve, the ad was genuinely underperforming and the pause sticks.</div>
     </div></div>
     </div>
     <div class="ad-card critical">
@@ -327,10 +320,6 @@ body {
     <div class="insight-block">
       <div class="insight-label">What&#39;s not working</div>
       <div class="insight-body">CPA of $55.73 is 86% above the $30 dynamic target. ROAS of 1.46x is well below the blended threshold. At $1,115 in spend and 20 attributed orders, the data is mature enough to diagnose. The 128 adset&#39;s other variants (128 A and 128 B) have negligible spend, so this is the adset&#39;s primary creative and it isn&#39;t converting efficiently.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Test plan</div>
-      <div class="insight-body">This ad may be a hidden TOF contributor whose conversions Meta is crediting downstream, or it may be a creative that genuinely isn&#39;t landing — the engagement metrics aren&#39;t strong enough to tell us which from in-platform data alone. The test: pause for 7 days and monitor blended account CPA, ROAS, and spend pacing, plus the retargeting ads in the same funnel. If the account gets worse or downstream ads degrade, this ad was carrying weight that wasn&#39;t visible at the ad level — reactivate it. If account metrics hold or improve, the ad was genuinely underperforming and the pause sticks.</div>
     </div></div>
     </div>
     <div class="ad-card critical">
@@ -402,9 +391,9 @@ body {
       <div class="insight-body">Branded search efficiency is a downstream signal of how well Meta&#39;s TOF work is building awareness — when Meta prospecting is healthy, branded search volume and ROAS tend to follow.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Revolutionary Grip Technology - Walk Longer, Hit Farther, Play Better Every Round</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">Revolutionary Grip Technology</span><span class="ad-tag review">Walk Longer, Hit Farther, Play Better Every Round — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=1339068799&amp;campaignId=23549204586" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$145</strong> Spend</span><span class="ad-metric"><strong>6.28x</strong> ROAS</span><span class="ad-metric"><strong>$14.53</strong> CPA</span><span class="ad-metric"><strong>17.77%</strong> CTR</span></div>
