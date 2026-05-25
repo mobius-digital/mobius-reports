@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -260,9 +257,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Google is doing the heavier direct-conversion lifting this week. Spend dropped 14% while ROAS improved to 2.81x — the branded search ad is the primary driver, with the non-branded search ad also contributing meaningfully. CTR dipped slightly but remains healthy at 3.7%.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">352 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">352 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/20H1n4cPINjETCR" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$442</strong> Spend</span><span class="ad-metric"><strong>0.70x</strong> ROAS</span><span class="ad-metric"><strong>$110.43</strong> CPA</span><span class="ad-metric"><strong>2.4</strong> Frequency</span><span class="ad-metric"><strong>2.55%</strong> CTR</span></div>
