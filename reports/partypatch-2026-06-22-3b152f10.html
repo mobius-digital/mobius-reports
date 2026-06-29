@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -213,33 +210,10 @@ body {
       </table>
   </div>
 
-  
-    <div class="section">
-      <h2>Meta Overview</h2>
-      <div class="platform-overview">
-        <div class="po-grid">
-    <div class="po-metric">
-      <div class="po-metric-label">Spend</div>
-      <div><span class="po-metric-value">$1,371</span><span class="po-metric-delta down">↓ 3.8%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">ROAS</div>
-      <div><span class="po-metric-value">1.40x</span><span class="po-metric-delta up">↑ 70.0%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">CPA</div>
-      <div><span class="po-metric-value">$48.96</span><span class="po-metric-delta up">↓ 27.9%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">Avg Freq</div>
-      <div><span class="po-metric-value">3.3</span></div>
-    </div></div>
-        <div class="po-summary"><strong>Week summary:</strong> Meta spend held roughly flat WoW while attributed revenue grew 63% — a meaningful efficiency improvement even though direct ROAS remains well below Google&#39;s. The account is running a large number of broad prospecting creatives at low-to-mid CPM; most spend is concentrated in a handful of UGC video ads. Account-level frequency of 3.3 is creeping into fatigue territory and worth watching.</div>
-      </div>
-    </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card working-as-tof">
+  <div class="section"><h2>Meta — What&#39;s Working</h2>
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">352 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">352 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/2btdZ72UyGMrphb" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$249.73</strong> Spend</span><span class="ad-metric"><strong>1.85x</strong> ROAS</span><span class="ad-metric"><strong>$62.43</strong> CPA</span><span class="ad-metric"><strong>2.1</strong> Frequency</span><span class="ad-metric"><strong>1.66%</strong> CTR</span></div>
@@ -262,9 +236,9 @@ body {
       <div class="insight-body">The hook + hold combination here is the strongest in the high-spend Meta set — build sibling creatives off the same opening format and test whether the pattern holds across different messaging angles.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">373 C | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">373 C | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/24Mj4UqsUK3Cb8d" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246509210440266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$13.67</strong> Spend</span><span class="ad-metric"><strong>3.66x</strong> ROAS</span><span class="ad-metric"><strong>$13.67</strong> CPA</span><span class="ad-metric"><strong>1.5</strong> Frequency</span><span class="ad-metric"><strong>0.88%</strong> CTR</span></div>
@@ -287,56 +261,6 @@ body {
       <div class="insight-body">This is the only Meta ad this week hitting CPA at or near target with positive engagement — prioritize scaling it carefully and build sibling variants off the same creative structure.</div>
     </div></div>
     </div></div><div class="section"><h2>Meta — Ads to Review</h2>
-    <div class="ad-card critical">
-      <div class="ad-header">
-        <div><span class="ad-name">Offer - 8</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
-        <div class="ad-links"><a href="https://fb.me/1T1RmCDdvhMLXmt" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582743940266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$265.12</strong> Spend</span><span class="ad-metric"><strong>0.30x</strong> ROAS</span><span class="ad-metric"><strong>$132.56</strong> CPA</span><span class="ad-metric"><strong>1.5</strong> Frequency</span><span class="ad-metric"><strong>1.27%</strong> CTR</span></div>
-      <div class="ad-metrics ad-metrics-video"><span class="ad-metric"><strong>10.3%</strong> hook rate</span><span class="ad-metric"><strong>32.9%</strong> hold rate</span><span class="ad-metric"><strong>15.2%</strong> completion</span><span class="ad-metric"><strong>6.7%</strong> thruplay</span></div>
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Top of funnel. CPM of ~$31.40 is mid-range, frequency is 1.5, and the campaign is broad prospecting. Signals are consistent with TOF placement.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Diagnosis</div>
-      <div class="insight-body">Breakdown-effect check: (1) Engagement — hook rate of 10.3% is below the account video average of ~17%; hold rate of 32.9% is above average but hook is the gating metric for TOF. CTR of 1.27% is mid-range. Engagement is mixed, not clearly above average. (2) Pacing — Meta is still allocating $265 to this ad, the second-highest Meta spend this week. The algorithm has not throttled it. (3) Funnel cluster — CPM and frequency point to TOF, but hook rate is below average, which means the creative is not doing the scroll-stopping work TOF requires. All three checks return negative: engagement is weak on the primary TOF metric (hook), Meta is still spending heavily, and the TOF cluster doesn&#39;t hold because the creative isn&#39;t engaging the cold audience. CPA of $132.56 is 11× the $12 dynamic target.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s not working</div>
-      <div class="insight-body">Hook rate of 10.3% is the clearest signal — fewer than 1 in 10 people who see this ad watch past 3 seconds. The gamified offer format is not stopping the scroll in a cold audience context. With $265 spent and only 2 attributed orders, the creative is getting reach but not converting it.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Test plan</div>
-      <div class="insight-body">This ad may be a hidden TOF contributor whose conversions Meta is crediting downstream, or it may be a creative that genuinely isn&#39;t landing — the hook rate is too weak to confidently distinguish from in-platform data alone. The test: pause for 7 days and monitor blended account CPA, ROAS, and spend pacing, plus the retargeting ads in the same funnel. If the account gets worse or downstream ads degrade after the pause, this ad was carrying weight that wasn&#39;t visible at the ad level — reactivate it. If account metrics hold or improve, the gamified offer format is genuinely underperforming in cold audiences and the pause sticks.</div>
-    </div></div>
-    </div>
-    <div class="ad-card critical">
-      <div class="ad-header">
-        <div><span class="ad-name">359 A | UGC</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
-        <div class="ad-links"><a href="https://fb.me/22yjYEPx0sscdko" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243979655060266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$229.47</strong> Spend</span><span class="ad-metric"><strong>1.12x</strong> ROAS</span><span class="ad-metric"><strong>$76.49</strong> CPA</span><span class="ad-metric"><strong>1.8</strong> Frequency</span><span class="ad-metric"><strong>1.54%</strong> CTR</span></div>
-      <div class="ad-metrics ad-metrics-video"><span class="ad-metric"><strong>0.1%</strong> hook rate</span><span class="ad-metric"><strong>46.2%</strong> hold rate</span><span class="ad-metric"><strong>15.4%</strong> completion</span><span class="ad-metric"><strong>0.1%</strong> thruplay</span></div>
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Top of funnel. CPM of ~$23.84, frequency 1.8, broad adset — consistent TOF placement. However the creative engagement profile is anomalous.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Diagnosis</div>
-      <div class="insight-body">Breakdown-effect check: (1) Engagement — hook rate of 0.1% is effectively zero, far below the account video average of ~17%. This is the lowest hook rate in the entire account. Hold rate of 46.2% is high but that metric only applies to people who watched past 3 seconds — with a 0.1% hook rate, almost nobody gets there. The hold rate is statistically unreliable at this sample size. CTR of 1.54% is mid-range. (2) Pacing — Meta is still allocating $229 to this ad, the third-highest Meta spend this week. Not throttled. (3) Funnel cluster — CPM and frequency point to TOF but the hook rate is so far below average that the creative is not functioning as a TOF ad. All three checks return negative. CPA of $76.49 is 6.4× the $12 dynamic target.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s not working</div>
-      <div class="insight-body">A hook rate of 0.1% means the video is almost universally skipped in the first 3 seconds. The creative is not stopping the scroll at all. With $229 spent and only 3 attributed orders, Meta is burning budget on an ad that the audience is immediately swiping past.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Test plan</div>
-      <div class="insight-body">This ad may be a hidden TOF contributor whose conversions Meta is crediting downstream, or it may be a creative that genuinely isn&#39;t landing — the near-zero hook rate makes the latter more likely, but in-platform data alone can&#39;t confirm which. The test: pause for 7 days and monitor blended account CPA, ROAS, and spend pacing, plus the retargeting ads in the same funnel. If the account gets worse or downstream ads degrade after the pause, this ad was carrying weight that wasn&#39;t visible at the ad level — reactivate it. If account metrics hold or improve, the creative is genuinely broken and the pause sticks.</div>
-    </div></div>
-    </div>
     <div class="ad-card review">
       <div class="ad-header">
         <div><span class="ad-name">350 B | UGC</span><span class="ad-tag review">FATIGUE</span></div>
@@ -470,7 +394,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>AOV compression is the primary blended ROAS drag</strong>True AOV dropped from $36 to $30 WoW — a 17% decline. With spend up 12% and orders nearly doubling, the account is acquiring more customers but at lower basket sizes. This is pulling blended ROAS to 2.47x (just under the 2.5x target) and pushing blended CPA to $15 (above the $12 dynamic target). The conversion volume story is strong; the AOV story needs attention. Bundle offers, upsells, or multi-pack positioning on the LP are the levers to pull.</li><li><strong>Meta is running TOF at scale with downstream conversion credit going to Google</strong>Meta&#39;s direct ROAS of 1.40x looks soft in isolation, but the channel is running 60+ broad prospecting creatives at low CPM and filling the top of the funnel. Google branded search — which is BOF by definition — saw a 79% revenue increase WoW as Meta spend held flat. The two channels are working as a system: Meta generates awareness, Google captures the intent. Evaluating Meta&#39;s ROAS in isolation misses this dynamic.</li><li><strong>Account-level frequency at 3.3 is a creative refresh signal</strong>Meta account-level frequency of 3.3 means the average user has seen Party Patch ads more than 3 times this week. 350 B | UGC is already showing fatigue symptoms (CTR 0.40% despite healthy hook rate). With a large number of low-spend test creatives in the account, the team should identify which 3–5 ads are absorbing the most impressions and prioritize refreshing those first.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the Offer-8 and 359 A pause tests</strong>Both Underperformer ads have structured 7-day pause tests defined above. Execute them in sequence or simultaneously, then monitor blended CPA, ROAS, spend pacing, and downstream retargeting performance. Decision rule: account worsens → reactivate; holds or improves → keep paused. These two ads represent $494 in weekly spend — the outcome of these tests will materially inform Meta budget allocation.</div></div><div class="priority"><div class="priority-content"><strong>Refresh 350 B | UGC before frequency climbs further</strong>Frequency is at 3.2 and CTR has dropped to 0.40%. The creative itself has a healthy hook rate — the audience is just tired of it. Build 2–3 sibling variants off the same UGC format and swap them in. Don&#39;t pause the adset; swap the creative.</div></div><div class="priority"><div class="priority-content"><strong>Investigate AOV decline — bundle or upsell opportunity on LP</strong>AOV dropped from $36 to $30 this week despite a strong order volume increase. Review the landing page for bundle visibility, multi-pack pricing, and post-add-to-cart upsell flows. A $6 AOV recovery at this order volume would push blended ROAS above the 2.5x target and bring blended CPA back toward the $12 dynamic target.</div></div><div class="priority"><div class="priority-content"><strong>Scale 373 C | UGC carefully and watch the TP Shopping pause outcome</strong>373 C is the only Meta ad this week hitting near-target CPA with positive engagement — it&#39;s at $13.67 spend so data is thin, but the signal is the best in the Meta account. Increase budget incrementally and monitor whether CPA holds. In parallel, the TP non-branded Shopping pause test will clarify whether that $182/week is driving branded search discovery or genuinely wasted — the result should inform whether to reinvest those dollars into Meta TOF or Google branded search.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Refresh 350 B | UGC before frequency climbs further</strong>Frequency is at 3.2 and CTR has dropped to 0.40%. The creative itself has a healthy hook rate — the audience is just tired of it. Build 2–3 sibling variants off the same UGC format and swap them in. Don&#39;t pause the adset; swap the creative.</div></div><div class="priority"><div class="priority-content"><strong>Scale 373 C | UGC carefully and watch the TP Shopping pause outcome</strong>373 C is the only Meta ad this week hitting near-target CPA with positive engagement — it&#39;s at $13.67 spend so data is thin, but the signal is the best in the Meta account. Increase budget incrementally and monitor whether CPA holds. In parallel, the TP non-branded Shopping pause test will clarify whether that $182/week is driving branded search discovery or genuinely wasted — the result should inform whether to reinvest those dollars into Meta TOF or Google branded search.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 22 – Jun 28, 2026</div>
 </div>
