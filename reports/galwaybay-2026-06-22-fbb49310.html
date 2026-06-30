@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -279,9 +276,9 @@ body {
       <div class="insight-body">171 A is the strongest performer in the 171 adset by a wide margin — the UGC-style framing in a static format is worth iterating on with different product scenarios or on-course settings.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">172 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">172 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/2hgY7U3zuEMIL0j" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=699261830900369&amp;selected_ad_ids=120246569099590510" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$991</strong> Spend</span><span class="ad-metric"><strong>1.50x</strong> ROAS</span><span class="ad-metric"><strong>$495.52</strong> CPA</span><span class="ad-metric"><strong>1.4</strong> Frequency</span><span class="ad-metric"><strong>0.94%</strong> CTR</span></div>
@@ -302,31 +299,6 @@ body {
     <div class="insight-block">
       <div class="insight-label">Worth iterating on</div>
       <div class="insight-body">The hook on 172 A is the strongest in the account — whatever the opening 3 seconds are doing, that pattern should be tested across sibling creatives in the 172 adset and applied to future UGC briefs.</div>
-    </div></div>
-    </div>
-    <div class="ad-card working-as-tof">
-      <div class="ad-header">
-        <div><span class="ad-name">172 B | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
-        <div class="ad-links"><a href="https://fb.me/1TOTdjm74egDGUE" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=699261830900369&amp;selected_ad_ids=120246569466420510" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
-      </div>
-      <div class="ad-metrics"><span class="ad-metric"><strong>$44</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>1.1</strong> Frequency</span><span class="ad-metric"><strong>1.63%</strong> CTR</span></div>
-      <div class="ad-metrics ad-metrics-video"><span class="ad-metric"><strong>50.6%</strong> hook rate</span><span class="ad-metric"><strong>10.8%</strong> hold rate</span><span class="ad-metric"><strong>5.5%</strong> completion</span><span class="ad-metric"><strong>3.0%</strong> thruplay</span></div>
-      <div class="ad-insight">
-    <div class="insight-block">
-      <div class="insight-label">Funnel stage</div>
-      <div class="insight-body">Top of funnel. Frequency of 1.1 and minimal spend confirm this is very early in its run — Meta has barely started allocating budget here. Data is still maturing.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">What&#39;s working at TOF</div>
-      <div class="insight-body">Hook rate of 50.6% matches 172 A almost exactly — the opening of this creative is stopping the scroll at the same exceptional rate. Hold rate drops sharply to 10.8% after the hook, which suggests the body of the video isn&#39;t sustaining the interest the opening creates. That&#39;s a useful creative signal: the hook pattern from the 172 adset works; the mid-video content needs refinement.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Account contribution</div>
-      <div class="insight-body">Spend is too low for conversion data to be meaningful. Meta is still in early allocation mode — the algorithm hasn&#39;t committed budget here yet. The hook signal is the relevant data point at this stage.</div>
-    </div>
-    <div class="insight-block">
-      <div class="insight-label">Worth iterating on</div>
-      <div class="insight-body">The 172 hook formula is clearly working (both A and B hit ~50% hook rate) — the next iteration should focus on improving the mid-video hold rate, which is the gap between the strong open and the weak completion numbers.</div>
     </div></div>
     </div></div><div class="section"><h2>Meta — Ads to Review</h2>
     <div class="ad-card critical">
@@ -423,9 +395,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Google is doing the heavy conversion lifting this week — 108 attributed orders at a $29 CPA on $3,142 spend. Branded search (Exact + Phrase) is driving the bulk of revenue, which is consistent with Google&#39;s role in this account as a high-intent capture channel. The ROAS dip from last week reflects a modest spend increase with slightly lower revenue, not a structural change.</div>
       </div>
     </div><div class="section"><h2>Google — What&#39;s Working</h2>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT_Search_TM_Exact — Exact Match</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT_Search_TM_Exact</span><span class="ad-tag review">Exact Match — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=22310388931" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$857</strong> Spend</span><span class="ad-metric"><strong>23.04x</strong> ROAS</span><span class="ad-metric"><strong>$17.50</strong> CPA</span><span class="ad-metric"><strong>38.5%</strong> CTR</span></div>
@@ -444,9 +416,9 @@ body {
       <div class="insight-body">Branded exact match is performing at peak efficiency — the priority here is protecting budget allocation and ensuring this campaign never hits budget caps during peak traffic windows.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT_Search_TM_Phrase — Phrase Match</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT_Search_TM_Phrase</span><span class="ad-tag review">Phrase Match — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=23451656370" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$1,069</strong> Spend</span><span class="ad-metric"><strong>5.41x</strong> ROAS</span><span class="ad-metric"><strong>$62.87</strong> CPA</span><span class="ad-metric"><strong>19.0%</strong> CTR</span></div>
@@ -465,9 +437,9 @@ body {
       <div class="insight-body">Phrase match branded is the second-most efficient campaign in the account — together with Exact, branded search is capturing the downstream value of Meta&#39;s TOF spend. Ensure these campaigns have sufficient budget headroom as Meta spend scales.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT - Golf Rain Pants (Non-Branded Search)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT</span><span class="ad-tag review">Golf Rain Pants (Non-Branded Search) — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=23907577579" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$110</strong> Spend</span><span class="ad-metric"><strong>5.06x</strong> ROAS</span><span class="ad-metric"><strong>$55.07</strong> CPA</span><span class="ad-metric"><strong>7.95%</strong> CTR</span></div>
@@ -529,7 +501,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Static images are outperforming UGC video on direct conversion</strong>The two Winners on Meta this week are both static image ads (160 A and 171 A). The top UGC videos (146 A, 151 A) are spending heavily but converting at CPAs well above target. This doesn&#39;t mean video isn&#39;t working — 172 A has the best hook rate in the account and is clearly doing TOF work — but the direct conversion efficiency this week sits with stills. Worth tracking whether this holds next week or whether it&#39;s a short-term pattern.</li><li><strong>The 172 adset hook formula is the strongest creative signal in the account</strong>Both 172 A and 172 B hit ~50% hook rates — far above any other video in the account. The opening of these creatives is stopping the scroll at an exceptional rate. The gap between hook rate and hold rate (50% hook, 22% hold on 172 A; 50% hook, 11% hold on 172 B) suggests the mid-video content isn&#39;t sustaining the interest the opening creates. The next creative iteration should focus on extending the hold rate after the hook.</li><li><strong>Google branded search is capturing Meta&#39;s prospecting value efficiently</strong>Meta is spending $25,891 on broad prospecting while Google branded search (Exact + Phrase) is converting 66 orders at a blended CPA under $40. This is the expected funnel dynamic — Meta fills the pipeline, Google captures the demand. The risk is that if Meta spend drops or creative quality declines, branded search volume will follow. Ensure branded search campaigns have budget headroom to absorb any Meta-driven demand spikes.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 138 B underperformer pause test</strong>138 B has spent $1,700 at a $340 CPA with weak CTR and no TOF cluster to explain the gap. Pause for 7 days and monitor blended account CPA, ROAS, and downstream retargeting performance. If account metrics hold or improve, keep it paused. If they degrade, reactivate — the ad was contributing via the breakdown effect.</div></div><div class="priority"><div class="priority-content"><strong>Run the 168 A underperformer pause test</strong>168 A has a high CTR (1.62%) but only 2 orders on $1,052 spend — clicks aren&#39;t converting. Pause for 7 days alongside the 138 B test and monitor the same blended metrics. Also review the landing page experience for the Broad | 168 audience to identify any post-click friction.</div></div><div class="priority"><div class="priority-content"><strong>Build 172-hook sibling creatives and improve mid-video hold</strong>The 172 adset is producing the best hook rates in the account (~50%) but hold rate drops sharply after the open. Brief new creative iterations that use the same opening formula but test different mid-video content to push hold rate from ~22% toward 30%+. This is the highest-leverage creative development opportunity in the account right now.</div></div><div class="priority"><div class="priority-content"><strong>Review the 153 A landing page for high-AOV buyer conversion</strong>153 A is finding buyers who spend well above average AOV but converting them at a CPA above target. The ad creative is doing its job — the post-click experience is the gap. Review the LP for the Broad | 153 audience and consider testing a bundle or upsell offer to improve conversion rate without changing the creative.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Build 172-hook sibling creatives and improve mid-video hold</strong>The 172 adset is producing the best hook rates in the account (~50%) but hold rate drops sharply after the open. Brief new creative iterations that use the same opening formula but test different mid-video content to push hold rate from ~22% toward 30%+. This is the highest-leverage creative development opportunity in the account right now.</div></div><div class="priority"><div class="priority-content"><strong>Review the 153 A landing page for high-AOV buyer conversion</strong>153 A is finding buyers who spend well above average AOV but converting them at a CPA above target. The ad creative is doing its job — the post-click experience is the gap. Review the LP for the Broad | 153 audience and consider testing a bundle or upsell offer to improve conversion rate without changing the creative.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 22 – Jun 28, 2026</div>
 </div>
