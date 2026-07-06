@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -258,9 +255,9 @@ body {
       <div class="insight-body">The combination of a solid hook (14.4%) and high hold rate (29.8%) is driving the CTR. Whatever the 148 B-3 creative does in the first 3 seconds to keep viewers watching is worth isolating and replicating in sibling UGC iterations.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">142 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">142 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/1TNYGCWS9ssjNvI" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=3217552185130501&amp;selected_ad_ids=120247087107760415" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$260</strong> Spend</span><span class="ad-metric"><strong>1.54x</strong> ROAS</span><span class="ad-metric"><strong>$37.16</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>3.12%</strong> CTR</span></div>
@@ -283,9 +280,9 @@ body {
       <div class="insight-body">Whatever the opening frame of 142 A is doing to achieve a 54.7% hook rate should be the template for the next round of UGC creative briefs — test that same opening approach across different product angles and creators.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">148 A-3 | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">148 A-3 | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/33p6cPqGciC2soW" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=3217552185130501&amp;selected_ad_ids=120248689232810415" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$382</strong> Spend</span><span class="ad-metric"><strong>2.08x</strong> ROAS</span><span class="ad-metric"><strong>$31.85</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>2.57%</strong> CTR</span></div>
@@ -398,9 +395,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Google is doing the conversion-efficiency work this week: 88 attributed orders at a $16.17 CPA on $1,423 spend. ROAS jumped from 4.13x to 5.20x week-over-week on essentially flat spend — the branded search aggregate is the primary driver, with the non-branded search ad also contributing strong efficiency.</div>
       </div>
     </div><div class="section"><h2>Google — What&#39;s Working</h2>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Revolutionary Grip Technology - Walk Longer, Hit Farther, Play Better Every Round</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">Revolutionary Grip Technology</span><span class="ad-tag review">Walk Longer, Hit Farther, Play Better Every Round — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=1339068799&amp;campaignId=23549204586" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$145</strong> Spend</span><span class="ad-metric"><strong>6.00x</strong> ROAS</span><span class="ad-metric"><strong>$16.07</strong> CPA</span><span class="ad-metric"><strong>10.47%</strong> CTR</span></div>
@@ -483,7 +480,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>UGC video is outperforming static on engagement — but static still dominates spend</strong>The top engagement metrics this week belong to UGC video ads: 142 A has a 54.7% hook rate, 148 A-3 hits 36.4%, and 148 B-3 is the only confirmed winner. Meanwhile, Meta is allocating the majority of budget to static image ads (F3 at $2,739, 124 C at $1,437) that are running below-target CPA. The algorithm is spending on volume; the creative signal says UGC video is the more efficient path.</li><li><strong>Google is carrying disproportionate conversion efficiency at low spend share</strong>Google represents 13.6% of total ad spend but is generating 29% of attributed revenue this week, with CPA improving from $18.23 to $16.17 week-over-week. The branded search aggregate and the non-branded search ad are both running well. This is a structural feature of the channel mix — Google captures high-intent demand that Meta&#39;s prospecting creates upstream.</li><li><strong>Two high-efficiency Meta ads are being starved of budget</strong>138 B (CPA $14.04, ROAS 5.16x) and 122 A (CPA $19.72, ROAS 3.11x) are both clearing the blended targets but receiving under $100 in spend combined. Both have CTR at or above the account average. Meta&#39;s algorithm is not naturally scaling them — this likely requires manual intervention to test at higher budget.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 136 B pause test</strong>136 B | Still is flagged as an Underperformer with CPA at $62.34 and CTR below the account average. Pause for 7 days and monitor blended account CPA, ROAS, spend pacing, and downstream retargeting performance. If account metrics hold or improve, keep it paused. If the account degrades, reactivate — the ad may have been contributing via the breakdown effect.</div></div><div class="priority"><div class="priority-content"><strong>Manually test scaling 138 B and 122 A</strong>Both ads are clearing the blended CPA and ROAS targets but receiving minimal spend. Duplicate each into a fresh adset with a higher daily budget cap and let Meta re-optimize. If either scales with efficiency intact, it becomes a candidate to absorb budget currently going to 124 C or F3.</div></div><div class="priority"><div class="priority-content"><strong>Build more creative off the 142 A hook pattern</strong>142 A&#39;s 54.7% hook rate is the highest in the account and more than double the average. Brief 2–3 new UGC creators to open their videos with the same structural approach — whatever the first frame is doing to stop the scroll is the learning to replicate. Test across different product angles (grip, comfort, durability).</div></div><div class="priority"><div class="priority-content"><strong>Watch F3 and 124 C frequency and CPA trend over the next 5 days</strong>These two ads account for over $4,100 in spend this week and are both running above the $29 dynamic target CPA. Neither is in crisis, but if CPA doesn&#39;t trend down as the week&#39;s data matures — or if frequency climbs above 2.5x — both become candidates for a creative refresh rather than continued scaling.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Build more creative off the 142 A hook pattern</strong>142 A&#39;s 54.7% hook rate is the highest in the account and more than double the average. Brief 2–3 new UGC creators to open their videos with the same structural approach — whatever the first frame is doing to stop the scroll is the learning to replicate. Test across different product angles (grip, comfort, durability).</div></div><div class="priority"><div class="priority-content"><strong>Watch F3 and 124 C frequency and CPA trend over the next 5 days</strong>These two ads account for over $4,100 in spend this week and are both running above the $29 dynamic target CPA. Neither is in crisis, but if CPA doesn&#39;t trend down as the week&#39;s data matures — or if frequency climbs above 2.5x — both become candidates for a creative refresh rather than continued scaling.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 29 – Jul 5, 2026</div>
 </div>
