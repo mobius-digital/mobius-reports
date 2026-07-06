@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -237,9 +234,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Meta spent $4,225 across a large creative testing portfolio — 59 attributed orders at a channel CPA of $71.62, down from $85 last week. Direct ROAS is 1.24x, roughly flat week-over-week. The account frequency of 1.9 is healthy; audiences are fresh. Most of the spend is in prospecting creative tests, which is consistent with the channel&#39;s role here.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">2804-2 (2804 - Hozzle And Hack)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">2804-2 (2804</span><span class="ad-tag review">Hozzle And Hack) — WINNER</span></div>
         <div class="ad-links"><a href="https://fb.me/21ENb1yafqVUIGm" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=963898971023823&amp;selected_ad_ids=120242460444050741" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$282.95</strong> Spend</span><span class="ad-metric"><strong>3.00x</strong> ROAS</span><span class="ad-metric"><strong>$35.37</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>2.70%</strong> CTR</span></div>
@@ -279,9 +276,9 @@ body {
       <div class="insight-body">The 290 UGC format has unusually strong hold and completion rates — whatever is happening in the body of this video after the hook is worth studying and carrying into new UGC briefs.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">2804 - 2 (2804 - Hozzle and Hack, Creator Content)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">2804</span><span class="ad-tag review">2 (2804 - Hozzle and Hack, Creator Content) — WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/20hXaFamC6mXqG0" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=963898971023823&amp;selected_ad_ids=120241055553410741" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$320.83</strong> Spend</span><span class="ad-metric"><strong>1.03x</strong> ROAS</span><span class="ad-metric"><strong>$106.94</strong> CPA</span><span class="ad-metric"><strong>1.1</strong> Frequency</span><span class="ad-metric"><strong>2.26%</strong> CTR</span></div>
@@ -304,9 +301,9 @@ body {
       <div class="insight-body">The hook-and-hold combination in this Hozzle and Hack creator format is consistently outperforming the account average — brief new creator content around the same opening pattern and test it in the Creative Testing campaign.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">2804 - 1 (2804 - Jesse, Creators Campaign ABO)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">2804</span><span class="ad-tag review">1 (2804 - Jesse, Creators Campaign ABO) — WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/28tT4RAvrPxzolS" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=963898971023823&amp;selected_ad_ids=120242459209120741" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$350.13</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>1.7</strong> Frequency</span><span class="ad-metric"><strong>8.27%</strong> CTR</span></div>
@@ -508,7 +505,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>AOV compression is the primary blended ROAS driver this week</strong>Order volume grew from 91 to 112 week-over-week, but True AOV dropped from $107 to $82 — a 23% decline. This is what&#39;s pulling blended ROAS from 1.61x to 1.54x despite roughly flat spend. The ad efficiency story is actually improving (Meta channel CPA dropped from $85 to $71.62); the revenue-per-order problem is upstream of the ads.</li><li><strong>Creator video (Hozzle and Hack format) is the strongest creative signal on Meta</strong>The 2804 Hozzle and Hack creator ads are generating the highest hook rates (45–50%) and hold rates (44–46%) in the account. One ad (2804-2) is a confirmed winner; the sibling ad (2804 - 2 in Creator Content) is a strong TOF contributor. This format is outperforming the broader static and UGC creative testing pool and warrants more budget and iteration.</li><li><strong>Heavy spend concentration in underperforming static creative</strong>333 C | Still received $995 in spend — nearly 24% of total Meta spend — at a CPA of $82.95 and ROAS of 0.61x. The static creative testing pool is absorbing a large share of budget with mixed results. The two underperformer test plans (333 C and 291 B) together represent $1,457 in spend this week; resolving those tests will free up budget for the creator formats that are working.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 333 C | Still pause test</strong>Pause 333 C | Still for 7 days per the test plan on the ad card. Monitor blended account CPA, ROAS, spend pacing, and retargeting ad performance daily. Decision rule: if account metrics worsen, reactivate; if flat or better, keep paused. This is the single highest-spend ad in the Meta account and the test result will directly inform how much budget to reallocate.</div></div><div class="priority"><div class="priority-content"><strong>Run the 291 B | UGC pause test</strong>Pause 291 B | UGC for 7 days per the test plan. Same monitoring protocol as 333 C. Together these two tests cover $1,457 in weekly spend — the outcome will clarify whether that budget should shift toward the Hozzle and Hack creator format or the 290 UGC adset.</div></div><div class="priority"><div class="priority-content"><strong>Scale or iterate on the Hozzle and Hack creator format</strong>2804-2 (Creators Campaign ABO) is a confirmed winner at $35.37 CPA and 3.00x ROAS. The sibling ad in Creator Content has the highest hook rate in the account at 50.5%. Brief new creator content using the same opening pattern and test it in the Creative Testing campaign. This is the clearest creative signal in the account this week.</div></div><div class="priority"><div class="priority-content"><strong>Investigate the AOV drop with the broader team</strong>True AOV fell from $107 to $82 week-over-week — a 23% decline that is the primary reason blended ROAS is below the 2.5x target. Combined with $626 in refunds (flagged for review), this warrants a conversation with the product and CX teams about order composition, bundle performance, and whether a specific SKU or promotion is driving lower-value orders.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 333 C | Still pause test</strong>Pause 333 C | Still for 7 days per the test plan on the ad card. Monitor blended account CPA, ROAS, spend pacing, and retargeting ad performance daily. Decision rule: if account metrics worsen, reactivate; if flat or better, keep paused. This is the single highest-spend ad in the Meta account and the test result will directly inform how much budget to reallocate.</div></div><div class="priority"><div class="priority-content"><strong>Scale or iterate on the Hozzle and Hack creator format</strong>2804-2 (Creators Campaign ABO) is a confirmed winner at $35.37 CPA and 3.00x ROAS. The sibling ad in Creator Content has the highest hook rate in the account at 50.5%. Brief new creator content using the same opening pattern and test it in the Creative Testing campaign. This is the clearest creative signal in the account this week.</div></div><div class="priority"><div class="priority-content"><strong>Investigate the AOV drop with the broader team</strong>True AOV fell from $107 to $82 week-over-week — a 23% decline that is the primary reason blended ROAS is below the 2.5x target. Combined with $626 in refunds (flagged for review), this warrants a conversation with the product and CX teams about order composition, bundle performance, and whether a specific SKU or promotion is driving lower-value orders.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 29 – Jul 5, 2026</div>
 </div>
