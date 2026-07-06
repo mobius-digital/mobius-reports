@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -206,37 +203,9 @@ body {
     
     <div class="summary-text">Blended ROAS of 2.08x is below the 2.7x target, and blended CPA of $192 is well above the $148 dynamic target — a meaningful step back from last week&#39;s 3.04x / $118. Refunds totaled $9,686 this week (18% of revenue) — worth a product or CX review.</div>
     
-      <h3 style="margin-top:24px;">Channel Breakdown</h3>
-      <table class="channel-table">
-        <thead><tr><th>Channel</th><th>Revenue</th><th>Spend</th><th>ROAS</th><th>CPA</th></tr></thead>
-        <tbody><tr><td>Facebook Ads</td><td>$25,836 <span class="channel-delta down">▼ 53.3%</span></td><td>$22,943 <span class="channel-delta down">▼ 11.4%</span></td><td>1.13x <span class="channel-delta down">▼ 47.3%</span></td><td>$287 <span class="channel-delta down">▲ 58.3%</span></td></tr><tr><td>Google Ads</td><td>$25,825 <span class="channel-delta down">▼ 30.1%</span></td><td>$2,528 <span class="channel-delta down">▼ 19.5%</span></td><td>10.21x <span class="channel-delta down">▼ 13.1%</span></td><td>$37.73 <span class="channel-delta down">▲ 29.7%</span></td></tr></tbody>
-      </table>
   </div>
 
-  
-    <div class="section">
-      <h2>Meta Overview</h2>
-      <div class="platform-overview">
-        <div class="po-grid">
-    <div class="po-metric">
-      <div class="po-metric-label">Spend</div>
-      <div><span class="po-metric-value">$22,943</span><span class="po-metric-delta down">↓ 11.4%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">ROAS</div>
-      <div><span class="po-metric-value">1.13x</span><span class="po-metric-delta down">↓ 47.3%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">CPA</div>
-      <div><span class="po-metric-value">$287</span><span class="po-metric-delta down">↑ 58.3%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">Avg Freq</div>
-      <div><span class="po-metric-value">3.2</span></div>
-    </div></div>
-        <div class="po-summary"><strong>Week summary:</strong> Meta is running at 1.13x direct ROAS this week — down from 2.14x last week — with channel CPA climbing to $287. Account-level frequency has reached 3.2, which is a meaningful signal: the broad audience pool is seeing these creatives repeatedly, and the engagement data shows most individual ads are still at low-to-mid frequency per ad. The account-level number is being pulled up by a large number of active ads across many adsets rather than any single creative burning out. Google is doing the heavier conversion lifting this week at 10.21x, which is consistent with its branded search role.</div>
-      </div>
-    </div><div class="section"><h2>Meta — What&#39;s Working</h2>
+  <div class="section"><h2>Meta — What&#39;s Working</h2>
     <div class="ad-card winner">
       <div class="ad-header">
         <div><span class="ad-name">143 D | Still (Broad | 143)</span><span class="ad-tag winner">WINNER</span></div>
@@ -279,9 +248,9 @@ body {
       <div class="insight-body">The 169 B creative is running in three adsets simultaneously (169-1, 169-2, 169-3) — the 169-1 instance is the one converting; the other two have zero attributed orders. The creative itself works; the adset context or audience signal in 169-1 is the differentiator worth understanding.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">172 A | UGC (Broad | 172)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">172 A | UGC (Broad | 172)</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/2f1pyz8LedFu47i" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=699261830900369&amp;selected_ad_ids=120246569099590510" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$701</strong> Spend</span><span class="ad-metric"><strong>0.77x</strong> ROAS</span><span class="ad-metric"><strong>$701</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>1.23%</strong> CTR</span></div>
@@ -304,9 +273,9 @@ body {
       <div class="insight-body">The hook mechanic in 172 A is the strongest scroll-stopper in the account — whatever the opening frame or first line of copy is doing, it should be tested as a template for the next round of UGC briefs.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">172 B | UGC (Broad | 172)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">172 B | UGC (Broad | 172)</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/1ZTDYMbDtIkamlu" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=699261830900369&amp;selected_ad_ids=120246569466420510" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$318</strong> Spend</span><span class="ad-metric"><strong>1.97x</strong> ROAS</span><span class="ad-metric"><strong>$318</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>1.80%</strong> CTR</span></div>
@@ -423,9 +392,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Google is doing the conversion heavy lifting this week — $25,825 in attributed revenue on $2,528 spend, driven almost entirely by branded search. CPA ticked up from $29 last week to $38 this week, consistent with lower order volume rather than a structural change. Branded search is healthy; non-branded is early-stage with minimal spend.</div>
       </div>
     </div><div class="section"><h2>Google — What&#39;s Working</h2>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT_Search_TM_Exact — Branded Search</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT_Search_TM_Exact</span><span class="ad-tag review">Branded Search — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=22310388931" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$633</strong> Spend</span><span class="ad-metric"><strong>14.47x</strong> ROAS</span><span class="ad-metric"><strong>$24.36</strong> CPA</span><span class="ad-metric"><strong>37.68%</strong> CTR</span></div>
@@ -444,9 +413,9 @@ body {
       <div class="insight-body">Branded exact match is the account&#39;s highest-ROAS placement — any Meta TOF spend that builds brand awareness feeds directly into this campaign&#39;s conversion volume.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT_Search_TM_Phrase — Branded Phrase</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT_Search_TM_Phrase</span><span class="ad-tag review">Branded Phrase — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=23451656370" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$647</strong> Spend</span><span class="ad-metric"><strong>8.14x</strong> ROAS</span><span class="ad-metric"><strong>$92.39</strong> CPA</span><span class="ad-metric"><strong>20.99%</strong> CTR</span></div>
@@ -465,9 +434,9 @@ body {
       <div class="insight-body">Branded phrase is converting at a lower rate than exact match (as expected) but still well within target — the phrase match net is worth keeping wide to capture brand-adjacent queries.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">QT - Golf Rain Pants (Non-Branded Search)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">QT</span><span class="ad-tag review">Golf Rain Pants (Non-Branded Search) — WINNER</span></div>
         <div class="ad-links"><a href="https://adwords.google.com/aw/overview?__e=6456136099&amp;campaignId=23907577579" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$90</strong> Spend</span><span class="ad-metric"><strong>5.95x</strong> ROAS</span><span class="ad-metric"><strong>$45.24</strong> CPA</span><span class="ad-metric"><strong>9.40%</strong> CTR</span></div>
@@ -509,7 +478,7 @@ body {
     </div></div><div class="section"><h2>Site-Level Flags</h2>
     <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">170 C | Still — High CTR, Near-Zero Conversion</span><span class="ad-tag review">SITE-LEVEL FLAG</span></div>
+        <div><span class="ad-name">170 C | Still</span><span class="ad-tag review">High CTR, Near-Zero Conversion — SITE-LEVEL FLAG</span></div>
         <div class="ad-links"><a href="https://fb.me/1Vg7BLaG5VavGPS" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=699261830900369&amp;selected_ad_ids=120246569044400510" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$1,034</strong> Spend</span><span class="ad-metric"><strong>0.55x</strong> ROAS</span><span class="ad-metric"><strong>$517</strong> CPA</span><span class="ad-metric"><strong>2.93%</strong> CTR</span></div>
@@ -528,7 +497,7 @@ body {
       <div class="insight-body">952 clicks generated only 2 purchases — a 0.21% click-to-purchase rate. The creative is clearly driving curiosity (CTR of 2.93% is the highest static ad in the account), but something is breaking post-click. Review the landing page experience for this traffic: check bounce rate, time on page, and whether the LP matches the creative&#39;s promise. Also consider whether the audience this creative is attracting (broad, low CPM) has the purchase intent to convert at Galway Bay&#39;s price point. This is a conversation for the team to have before deciding whether to pause the ad or fix the funnel.</div>
     </div></div>
     </div></div>
-  <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Account frequency is at 3.2 with a large active ad count — the number is structural, not a single creative burning out</strong>The Meta account-level frequency of 3.2 looks alarming, but per-ad frequencies are mostly 1.2–2.1. The high account number reflects the sheer volume of active ads (50+) across many adsets all reaching the same broad audience pool. The audience is seeing Galway Bay ads frequently in aggregate, even if no single creative is fatigued. The risk is cumulative ad fatigue at the brand level, not creative-level burnout. Consider consolidating adsets to reduce audience overlap and lower the effective account frequency.</li><li><strong>The 172 creative family has the two best hook rates in the account — and zero conversion credit</strong>172 A (52.2% hook rate) and 172 B (56.1% hook rate) are the top scroll-stoppers in the account by a wide margin, but both have minimal attributed orders. This is a textbook breakdown-effect pattern: the creative is doing the TOF engagement work, and conversions are being credited downstream. The team should watch branded search volume and retargeting performance over the next two weeks to see if the 172 creative family is driving downstream lift.</li><li><strong>Google branded search is carrying the blended account this week</strong>Google attributed $25,825 in revenue on $2,528 spend — nearly matching Meta&#39;s revenue at 9% of Meta&#39;s spend. This is structurally healthy (branded search captures demand that Meta&#39;s prospecting creates) but it also means the blended account is sensitive to any drop in branded search volume. If Meta&#39;s TOF spend continues to underperform on engagement, branded search volume will eventually soften as fewer new users are introduced to the brand.</li></ul></div>
+  <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Google branded search is carrying the blended account this week</strong>Google attributed $25,825 in revenue on $2,528 spend — nearly matching Meta&#39;s revenue at 9% of Meta&#39;s spend. This is structurally healthy (branded search captures demand that Meta&#39;s prospecting creates) but it also means the blended account is sensitive to any drop in branded search volume. If Meta&#39;s TOF spend continues to underperform on engagement, branded search volume will eventually soften as fewer new users are introduced to the brand.</li></ul></div>
   <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 148 C pause test — it&#39;s the highest-spend ad in the account and has a 1.8% hook rate</strong>148 C is spending $2,489/week with a hook rate of 1.8% against a ~20% account average. Pause for 7 days and monitor blended CPA, ROAS, spend pacing, and downstream retargeting performance. If account metrics worsen, reactivate — the ad was contributing via the breakdown effect. If metrics hold or improve, keep paused and reallocate budget to 143 D and 169 B (Broad | 169-1), which are the two confirmed winners this week.</div></div><div class="priority"><div class="priority-content"><strong>Investigate the 170 C click-to-conversion gap before spending another $1,000</strong>170 C generated 952 clicks and 2 purchases — a 0.21% click-to-purchase rate. Pull LP analytics for this traffic source: bounce rate, time on page, and scroll depth. If the LP is broken for this audience, fix it before the ad runs another week. If the audience is genuinely low-intent, pause the ad and redirect the $1,034/week to the 172 creative family.</div></div><div class="priority"><div class="priority-content"><strong>Scale 143 D | Still — it&#39;s the most efficient ad in the account this week</strong>143 D delivered CPA of $84 and ROAS of 3.10x on $506 spend with 6 attributed orders. It&#39;s the only static ad clearing both targets by a meaningful margin. Test a budget increase of 20–30% and monitor CPA stability. Also review what makes the D variant different from 143 B and 143 C (both underperforming) — the creative differentiator is worth documenting for future briefs.</div></div><div class="priority"><div class="priority-content"><strong>Document the 172 hook mechanic and brief it into the next UGC batch</strong>172 A (52.2% hook rate) and 172 B (56.1% hook rate) are the two best scroll-stoppers in the account. Whatever the opening frame or first line of copy is doing, it should be isolated, documented, and used as a template for the next round of UGC briefs. This is the clearest creative learning from this week.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 29 – Jul 5, 2026</div>
