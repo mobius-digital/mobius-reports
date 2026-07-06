@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -237,9 +234,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Meta spent $3,412 this week across a large creative roster, generating 47 attributed orders at a channel CPA of $72.60 — up significantly from $53.85 last week. The account is running broad prospecting across the CBO and Caddy Collection campaigns with frequency well under 2x, so the audience pool is fresh, but direct conversion efficiency dropped week-over-week. The UGC video cluster (Tiktok #25, #6) is carrying most of the attributed order volume on Meta.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card review">
+    <div class="ad-card winner">
       <div class="ad-header">
-        <div><span class="ad-name">Tiktok #6 | UGC</span><span class="ad-tag review">STRONGEST SIGNALS</span></div>
+        <div><span class="ad-name">Tiktok #6 | UGC</span><span class="ad-tag winner">STRONGEST SIGNALS</span></div>
         <div class="ad-links"><a href="https://fb.me/2baR8KJwMGo0p6U" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=313396960515158&amp;selected_ad_ids=120242222297840115" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$209.90</strong> Spend</span><span class="ad-metric"><strong>2.70x</strong> ROAS</span><span class="ad-metric"><strong>$41.98</strong> CPA</span><span class="ad-metric"><strong>1.4</strong> Frequency</span><span class="ad-metric"><strong>2.77%</strong> CTR</span></div>
@@ -398,8 +395,8 @@ body {
       <div class="insight-body">Watch whether CPA trends down over the next 7 days as any lagging conversions flow through attribution. If CPA stays above $35 with stable spend, the campaign warrants a deeper keyword and product feed review.</div>
     </div></div>
     </div></div>
-  <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Conversion volume dropped sharply week-over-week</strong>Orders fell from 208 to 124 (down ~40%) while spend held roughly flat. CVR dropped from 2.38% to 1.77% and sessions fell from 7,904 to 6,650. This isn&#39;t a creative problem alone — the session drop suggests either reduced traffic quality or a demand trough, and the CVR decline points to a post-click issue worth investigating alongside the ad-level work.</li><li><strong>Google ROAS compression is the bigger story this week</strong>Google dropped from 5.41x last week to 3.00x this week while spend fell 15%. The branded search ad is still exceptional (19.35x, $4.03 CPA), so the compression is coming entirely from Shopping | Hats. Last week Shopping was likely benefiting from a demand spike; this week it&#39;s reverting. The channel mix is still doing useful work — branded search is efficient and Shopping is generating volume — but the week-over-week swing is worth flagging.</li><li><strong>Meta&#39;s high-spend ads are not converting efficiently</strong>The two largest Meta spends — Tiktok #25 ($633) and 287-12 ($441) — together account for $1,074 of Meta&#39;s $3,412 spend and produced only 14 attributed orders between them. Both are flagged for review. If either pause test confirms they&#39;re not contributing via the breakdown effect, reallocating that budget to the Tiktok #6 pattern (higher CTR, better hold rate) would improve Meta&#39;s direct efficiency.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the Tiktok #25 pause test</strong>Pause Tiktok #25 | UGC for 7 days and monitor blended CPA, ROAS, spend pacing, and any retargeting ads in the same funnel. This is the account&#39;s largest single Meta spend at $633 — confirming whether it&#39;s a breakdown-effect contributor or a genuine underperformer is the highest-leverage decision this week.</div></div><div class="priority"><div class="priority-content"><strong>Run the 287-12 and 326-15 pause tests in sequence</strong>Pause 287-12 | Still and 326-15 | Still (together $740 in Meta spend) and apply the same 7-day monitoring protocol. Stagger the pauses if possible so you can isolate the effect of each — pausing both simultaneously makes it harder to read the account-level signal.</div></div><div class="priority"><div class="priority-content"><strong>Investigate the CVR and session drop</strong>CVR fell from 2.38% to 1.77% and sessions dropped ~16% week-over-week. Before scaling anything, confirm the landing page and checkout experience are functioning normally — a site or UX issue could be suppressing conversion across all channels and masking what&#39;s actually working creatively.</div></div><div class="priority"><div class="priority-content"><strong>Scale Tiktok #6 | UGC if the pause tests free up budget</strong>Tiktok #6 has the best CTR (2.77%) and closest-to-target CPA ($41.98) among Meta&#39;s active ads. If the Tiktok #25 and 287-12 pauses confirm those ads aren&#39;t contributing, redirect a portion of that budget here and test a sibling creative built on the same opening-frame pattern.</div></div></div></div>
+  <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Conversion volume dropped sharply week-over-week</strong>Orders fell from 208 to 124 (down ~40%) while spend held roughly flat. CVR dropped from 2.38% to 1.77% and sessions fell from 7,904 to 6,650. This isn&#39;t a creative problem alone — the session drop suggests either reduced traffic quality or a demand trough, and the CVR decline points to a post-click issue worth investigating alongside the ad-level work.</li><li><strong>Google ROAS compression is the bigger story this week</strong>Google dropped from 5.41x last week to 3.00x this week while spend fell 15%. The branded search ad is still exceptional (19.35x, $4.03 CPA), so the compression is coming entirely from Shopping | Hats. Last week Shopping was likely benefiting from a demand spike; this week it&#39;s reverting. The channel mix is still doing useful work — branded search is efficient and Shopping is generating volume — but the week-over-week swing is worth flagging.</li></ul></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 287-12 and 326-15 pause tests in sequence</strong>Pause 287-12 | Still and 326-15 | Still (together $740 in Meta spend) and apply the same 7-day monitoring protocol. Stagger the pauses if possible so you can isolate the effect of each — pausing both simultaneously makes it harder to read the account-level signal.</div></div><div class="priority"><div class="priority-content"><strong>Investigate the CVR and session drop</strong>CVR fell from 2.38% to 1.77% and sessions dropped ~16% week-over-week. Before scaling anything, confirm the landing page and checkout experience are functioning normally — a site or UX issue could be suppressing conversion across all channels and masking what&#39;s actually working creatively.</div></div><div class="priority"><div class="priority-content"><strong>Scale Tiktok #6 | UGC if the pause tests free up budget</strong>Tiktok #6 has the best CTR (2.77%) and closest-to-target CPA ($41.98) among Meta&#39;s active ads. If the Tiktok #25 and 287-12 pauses confirm those ads aren&#39;t contributing, redirect a portion of that budget here and test a sibling creative built on the same opening-frame pattern.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jun 29 – Jul 5, 2026</div>
 </div>
