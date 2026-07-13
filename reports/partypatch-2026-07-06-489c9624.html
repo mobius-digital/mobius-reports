@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -237,9 +234,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Meta spend jumped 32% week-over-week as new creative batches (394, 381, 385) entered the rotation. Direct ROAS compressed from 1.91x to 1.63x — consistent with a heavier prospecting load. The account-level frequency of 2.4 is healthy and the audience pool is not saturated. Most of the conversion weight is sitting on a small number of ads while the majority of the budget is doing reach and pipeline work.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Offer - 2 (Gamified - 1)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">Offer</span><span class="ad-tag review">2 (Gamified - 1) — WINNER</span></div>
         <div class="ad-links"><a href="https://fb.me/29dHnJRrLltRd49" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582639020266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$96.31</strong> Spend</span><span class="ad-metric"><strong>2.28x</strong> ROAS</span><span class="ad-metric"><strong>$16.05</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>2.33%</strong> CTR</span></div>
@@ -258,9 +255,9 @@ body {
       <div class="insight-body">The gamified offer mechanic is the only Meta format converting at or below the $20 CPA target this week — the creative pattern and offer structure here should be the template for the next iteration of this adset.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">352 A | UGC (Broad | 352)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">352 A | UGC (Broad | 352)</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/2Uq13UVfFtJAaFy" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$262.41</strong> Spend</span><span class="ad-metric"><strong>2.34x</strong> ROAS</span><span class="ad-metric"><strong>$65.60</strong> CPA</span><span class="ad-metric"><strong>1.9</strong> Frequency</span><span class="ad-metric"><strong>2.43%</strong> CTR</span></div>
@@ -283,9 +280,9 @@ body {
       <div class="insight-body">The hook + hold combination here is the strongest in the broad prospecting pool — whatever the first 3 seconds and the narrative structure are doing, sibling ads in the 352 adset and new prospecting iterations should borrow from this pattern.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">359 A | UGC (Broad | 359)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">359 A | UGC (Broad | 359)</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/1QFyhen4WOywCy5" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243979655060266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$136.92</strong> Spend</span><span class="ad-metric"><strong>3.48x</strong> ROAS</span><span class="ad-metric"><strong>$34.23</strong> CPA</span><span class="ad-metric"><strong>1.7</strong> Frequency</span><span class="ad-metric"><strong>1.86%</strong> CTR</span></div>
@@ -308,9 +305,9 @@ body {
       <div class="insight-body">The conversion performance here is worth understanding — review the landing page path and offer this ad is driving to, as the disconnect between weak video engagement and strong direct ROAS may point to a specific audience segment Meta has found that responds to this creative&#39;s message regardless of watch time.</div>
     </div></div>
     </div></div><div class="section"><h2>Meta — Ads to Review</h2>
-    <div class="ad-card critical">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">394 D | UGC (Broad | 394 - Hangover Free Sale)</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
+        <div><span class="ad-name">394 D | UGC (Broad | 394</span><span class="ad-tag review">Hangover Free Sale) — UNDERPERFORMER</span></div>
         <div class="ad-links"><a href="https://fb.me/1VodG01RARFHjds" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120248180706170266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$455.67</strong> Spend</span><span class="ad-metric"><strong>1.35x</strong> ROAS</span><span class="ad-metric"><strong>$65.10</strong> CPA</span><span class="ad-metric"><strong>1.5</strong> Frequency</span><span class="ad-metric"><strong>3.30%</strong> CTR</span></div>
@@ -354,9 +351,9 @@ body {
       <div class="insight-body">Watch for attributed orders to appear over the next 3–5 days as the attribution window fills in. If CTR holds above 2% but conversions remain zero after another week, escalate to a site-level flag review — the ad is driving traffic that isn&#39;t converting, which points to a landing page or offer mismatch rather than a creative failure.</div>
     </div></div>
     </div>
-    <div class="ad-card critical">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">388-7 (388 | Gamified - 2)</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
+        <div><span class="ad-name">388-7 (388 | Gamified</span><span class="ad-tag review">2) — UNDERPERFORMER</span></div>
         <div class="ad-links"><a href="https://fb.me/2bze3HwaQi455LI" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120248139228640266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$69.07</strong> Spend</span><span class="ad-metric"><strong>0.00x</strong> ROAS</span><span class="ad-metric"><strong>—</strong> CPA</span><span class="ad-metric"><strong>1.9</strong> Frequency</span><span class="ad-metric"><strong>0.48%</strong> CTR</span></div>
@@ -488,7 +485,7 @@ body {
     </div></div><div class="section"><h2>Site-Level Flags</h2>
     <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Offer - 8 (Gamified - 1)</span><span class="ad-tag review">SITE-LEVEL FLAG</span></div>
+        <div><span class="ad-name">Offer</span><span class="ad-tag review">8 (Gamified - 1) — SITE-LEVEL FLAG</span></div>
         <div class="ad-links"><a href="https://fb.me/1VjdUWdJGT3Fw2q" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582743940266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$61.50</strong> Spend</span><span class="ad-metric"><strong>1.79x</strong> ROAS</span><span class="ad-metric"><strong>$30.75</strong> CPA</span><span class="ad-metric"><strong>1.3</strong> Frequency</span><span class="ad-metric"><strong>1.56%</strong> CTR</span></div>
@@ -508,7 +505,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Gamified offer format is the only Meta structure hitting the CPA target</strong>Offer-2 in the Gamified-1 adset is the sole Meta ad converting at or below the $20 dynamic target CPA this week. The broad prospecting UGC ads (352, 359, 394) are doing reach and pipeline work at soft direct CPAs, which is expected — but the Gamified campaign is where Meta is actually closing purchases efficiently. The 388 Gamified-2 adset is not replicating this performance, suggesting the offer mechanic or creative execution in Gamified-1 is the differentiator, not the campaign structure alone.</li><li><strong>Branded search copy split is producing a large efficiency gap</strong>Two branded search ads in the same Google campaign are producing dramatically different results: the lifestyle-framed &#39;Adventures don&#39;t have to stop&#39; ad is at $6.25 CPA and 9.60x ROAS, while the product-feature &#39;The #1 natural hangover patch&#39; ad is at $23.52 CPA and 2.21x ROAS. Both are serving the same branded query pool. The aspiration-first copy direction is significantly outperforming the feature-first direction and this learning should inform creative testing across channels.</li><li><strong>394 adset is consuming the largest Meta budget share with minimal conversion return</strong>The 394 &#39;Hangover Free Sale&#39; adset (D, B, C, A, E variants combined) is spending the most of any Meta adset this week — 394 D alone is at $455 — but only 394 D has any attributed orders (7 orders). The sale-specific framing may be generating high CTR (394 D at 3.30% is account-best) without closing purchases, which could indicate a post-click experience mismatch with the sale promise. This warrants a landing page review for the sale-specific destination.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Review the 394 sale landing page before next week&#39;s spend cycle</strong>394 D is the largest single Meta spend this week at $455 with only 7 attributed orders. The CTR of 3.30% is the highest in the account — the creative is generating clicks — but the conversion rate is not following. Check whether the sale landing page matches the ad&#39;s offer promise and whether the checkout flow has any friction points specific to the sale campaign destination.</div></div><div class="priority"><div class="priority-content"><strong>Run the 394 D pause test and monitor downstream impact</strong>Per the test plan on 394 D: pause for 7 days and monitor blended account CPA, ROAS, spend pacing, and retargeting ad performance. If blended metrics worsen, reactivate — the ad is contributing via the breakdown effect. If metrics hold or improve, the sale framing is generating non-converting traffic and the pause sticks. This is the highest-leverage test available this week given the spend concentration.</div></div><div class="priority"><div class="priority-content"><strong>Pause 388-7 and monitor the Gamified-2 adset</strong>388-7 has a CTR of 0.48% vs 2.33% for Offer-2 in the adjacent Gamified-1 adset — the creative is not generating the engagement the gamified format requires. Pause for 7 days per the test plan and watch whether Gamified campaign conversion rate holds. If it does, the static image format is not working in this context and the budget should consolidate into the performing Offer variants.</div></div><div class="priority"><div class="priority-content"><strong>Scale or duplicate the &#39;Adventures don&#39;t have to stop&#39; branded search ad</strong>This ad is at $6.25 CPA and 9.60x ROAS — the most efficient conversion point in the account. Review whether budget constraints are limiting its impression share and whether the copy direction can be tested in non-branded search or applied to Meta video hooks. The aspiration-first framing is a proven signal worth expanding.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Review the 394 sale landing page before next week&#39;s spend cycle</strong>394 D is the largest single Meta spend this week at $455 with only 7 attributed orders. The CTR of 3.30% is the highest in the account — the creative is generating clicks — but the conversion rate is not following. Check whether the sale landing page matches the ad&#39;s offer promise and whether the checkout flow has any friction points specific to the sale campaign destination.</div></div><div class="priority"><div class="priority-content"><strong>Run the 394 D pause test and monitor downstream impact</strong>Per the test plan on 394 D: pause for 7 days and monitor blended account CPA, ROAS, spend pacing, and retargeting ad performance. If blended metrics worsen, reactivate — the ad is contributing via the breakdown effect. If metrics hold or improve, the sale framing is generating non-converting traffic and the pause sticks. This is the highest-leverage test available this week given the spend concentration.</div></div><div class="priority"><div class="priority-content"><strong>Create a flow for people who bought from a gamified ad</strong></div></div><div class="priority"><div class="priority-content"><strong>Scale or duplicate the &#39;Adventures don&#39;t have to stop&#39; branded search ad</strong>This ad is at $6.25 CPA and 9.60x ROAS — the most efficient conversion point in the account. Review whether budget constraints are limiting its impression share and whether the copy direction can be tested in non-branded search or applied to Meta video hooks. The aspiration-first framing is a proven signal worth expanding.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jul 6 – Jul 12, 2026</div>
 </div>
