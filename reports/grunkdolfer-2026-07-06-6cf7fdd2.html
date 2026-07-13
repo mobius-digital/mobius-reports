@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -237,9 +234,9 @@ body {
         <div class="po-summary"><strong>Week summary:</strong> Meta spent $3,204 this week across a large creative roster — direct attributed ROAS dropped from 1.53x last week to 1.14x, and channel CPA rose from $72.68 to $80.10. Account-level frequency is sitting at 2.9, which is approaching the range where audience fatigue starts to show up. The bulk of spend is concentrated in a handful of CBO and Caddy Collection ads; the UGC TikTok-repurposed creatives are absorbing significant budget with weak direct conversion.</div>
       </div>
     </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card review">
+    <div class="ad-card winner">
       <div class="ad-header">
-        <div><span class="ad-name">287-14 | Still</span><span class="ad-tag review">STRONGEST SIGNALS</span></div>
+        <div><span class="ad-name">287-14 | Still</span><span class="ad-tag winner">STRONGEST SIGNALS</span></div>
         <div class="ad-links"><a href="https://fb.me/qwc9uQHvr1iKQ25" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=313396960515158&amp;selected_ad_ids=120237114684900115" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$248</strong> Spend</span><span class="ad-metric"><strong>2.58x</strong> ROAS</span><span class="ad-metric"><strong>$41.33</strong> CPA</span><span class="ad-metric"><strong>1.5</strong> Frequency</span><span class="ad-metric"><strong>2.58%</strong> CTR</span></div>
@@ -437,7 +434,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>Static image ads are outperforming UGC video on direct conversion</strong>The top-converting Meta ads this week are all static images (287-14, 287-12, 326-6) while the UGC video pool — which is absorbing significant budget across the Tiktok | UGC adset — is generating very few attributed orders relative to spend. The video engagement metrics (hook, hold) are not differentiated enough from the account average to justify the current budget allocation to the UGC adset.</li><li><strong>Google efficiency dropped sharply week-over-week</strong>Google channel ROAS fell from 2.99x to 1.91x and CPA rose from $24.32 to $40.71 — driven almost entirely by the Shopping | Hats campaign absorbing $617 at a $102.80 CPA. Branded search remains highly efficient at $5.46 CPA. The channel mix within Google shifted toward less efficient spend this week.</li><li><strong>Account frequency at 2.9 — approaching fatigue territory</strong>Meta account-level frequency is 2.9 this week. Several Caddy Collection ads (326-1, 326-2, 326-4, 326-13) are sitting at frequencies of 2.4–2.6 with zero attributed orders, and 326-14 is at 2.8. If frequency continues climbing next week without creative refreshes, expect CTR declines across the 326 adset.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Decision on Tiktok #25 | UGC pause test</strong>Tiktok #25 is consuming $524/week — 16% of Meta budget — with a CPA of $174.58 and middling engagement. The test plan calls for a 7-day pause starting this week. Monitor blended account CPA, ROAS, and the other UGC ads in the Tiktok | UGC adset daily. If the account degrades, reactivate; if it holds or improves, keep paused and reallocate budget toward 287-14 and the CBO statics.</div></div><div class="priority"><div class="priority-content"><strong>Decision on Shopping | Hats pause test</strong>The Hats Shopping campaign spent $617 at a $102.80 CPA this week — the largest single efficiency drag on Google. Pause for 7 days and watch whether branded search volume or total order count drops. If branded search holds steady, redirect the budget toward tighter non-branded search campaigns or increase branded search budget.</div></div><div class="priority"><div class="priority-content"><strong>Refresh or consolidate the 326 Caddy Collection adset</strong>Multiple 326 statics (326-1, 326-2, 326-4, 326-12, 326-13) have zero attributed orders and frequencies approaching 2.5. 326-14 is the only ad generating revenue but at a high CPA and rising frequency. Either refresh the creative batch or consolidate budget to 326-6 and 326-14 while new creative is developed.</div></div><div class="priority"><div class="priority-content"><strong>Investigate refund spike — $659 this week vs $57 last week</strong>Refunds jumped from $57 last week to $659 this week (5.9% of revenue). This is a meaningful increase that warrants a product or CX review — check whether a specific SKU, campaign, or fulfillment issue is driving returns before the pattern compounds.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Decision on Shopping | Hats pause test</strong>The Hats Shopping campaign spent $617 at a $102.80 CPA this week — the largest single efficiency drag on Google. Pause for 7 days and watch whether branded search volume or total order count drops. If branded search holds steady, redirect the budget toward tighter non-branded search campaigns or increase branded search budget.</div></div><div class="priority"><div class="priority-content"><strong>Refresh or consolidate the 326 Caddy Collection adset</strong>Multiple 326 statics (326-1, 326-2, 326-4, 326-12, 326-13) have zero attributed orders and frequencies approaching 2.5. 326-14 is the only ad generating revenue but at a high CPA and rising frequency. Either refresh the creative batch or consolidate budget to 326-6 and 326-14 while new creative is developed.</div></div><div class="priority"><div class="priority-content"><strong>Investigate refund spike — $659 this week vs $57 last week</strong>Refunds jumped from $57 last week to $659 this week (5.9% of revenue). This is a meaningful increase that warrants a product or CX review — check whether a specific SKU, campaign, or fulfillment issue is driving returns before the pattern compounds.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jul 6 – Jul 12, 2026</div>
 </div>
