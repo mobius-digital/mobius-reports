@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -300,9 +297,9 @@ body {
       <div class="insight-body">This ad is generating the best CPA in the Meta account at a low CPM. If spend scales up and the efficiency holds, this is the creative to push budget toward — test a budget increase and monitor whether CPA stays under $24.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">243 A | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">243 A | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/278vIoZdHcuXq1B" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=12528825&amp;selected_ad_ids=52555959742213" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$1,080</strong> Spend</span><span class="ad-metric"><strong>1.26x</strong> ROAS</span><span class="ad-metric"><strong>$54.02</strong> CPA</span><span class="ad-metric"><strong>1.1</strong> Frequency</span><span class="ad-metric"><strong>1.93%</strong> CTR</span></div>
@@ -325,9 +322,9 @@ body {
       <div class="insight-body">The UGC format in the 243 adset is generating volume reach at low CPM — test a hook variation that leads with a stronger product benefit in the first 2 seconds to push hook rate above 15% and see if hold rate follows.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">236 B | UGC</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">236 B | UGC</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/BWMlxB8m7We6LXT" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=12528825&amp;selected_ad_ids=52537373911813" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$218</strong> Spend</span><span class="ad-metric"><strong>1.73x</strong> ROAS</span><span class="ad-metric"><strong>$43.67</strong> CPA</span><span class="ad-metric"><strong>1.4</strong> Frequency</span><span class="ad-metric"><strong>2.16%</strong> CTR</span></div>
@@ -509,7 +506,7 @@ body {
     </div></div><div class="section"><h2>Site-Level Flags</h2>
     <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">274 - 3 | Still</span><span class="ad-tag review">SITE-LEVEL FLAG</span></div>
+        <div><span class="ad-name">274</span><span class="ad-tag review">3 | Still — SITE-LEVEL FLAG</span></div>
         <div class="ad-links"><a href="https://fb.me/29DkFgsiqtAj0s1" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=12528825&amp;selected_ad_ids=52637450583213" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$319</strong> Spend</span><span class="ad-metric"><strong>1.64x</strong> ROAS</span><span class="ad-metric"><strong>$31.90</strong> CPA</span><span class="ad-metric"><strong>1.6</strong> Frequency</span><span class="ad-metric"><strong>3.00%</strong> CTR</span></div>
@@ -550,7 +547,7 @@ body {
     </div></div>
     </div></div>
   <div class="section"><h2>Account-Level Patterns</h2><ul class="insights-list"><li><strong>267 C | Still is consuming 29% of Meta spend with the worst efficiency in the account</strong>The top-spending Meta ad this week ($2,282) has a near-zero hook rate (0.0%) and a CPA of $91 — 3.8x the $24 dynamic target. Meta has not self-throttled it, which means the algorithm sees something the ad-level metrics don&#39;t fully capture, but the engagement data is too weak to classify this as TOF contribution. This single ad is the primary driver of Meta&#39;s elevated channel CPA this week. The test plan on this card is the most important action item this week.</li><li><strong>Google is doing the conversion heavy lifting; Meta is running broad</strong>Google generated $5,330 in attributed revenue on $1,633 spend (3.26x) while Meta generated $9,947 on $7,872 (1.26x). This is a structural split — Google is capturing high-intent branded and non-branded search while Meta is running broad prospecting at low CPM. The blended ROAS of 2.09x is below the 2.5x target this week, and closing that gap requires either Meta&#39;s TOF work converting downstream or a creative refresh that improves Meta&#39;s direct conversion rate.</li><li><strong>TOF video engagement is mixed — a few standouts, several near-zero performers</strong>The account has multiple video ads with hook rates effectively at 0% (267 C, 277-5, 225 B, 226 A via is_video:true with near-zero rates) still receiving meaningful spend. Meanwhile, 278 B | UGC has an 58.9% hook rate and 280 C | UGC has a 24.3% hook rate — both well above the account average. The creative quality gap is wide. Budget should be shifting toward the high-hook-rate UGC formats and away from the zero-engagement video placements.</li></ul></div>
-  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 267 C | Still pause test immediately</strong>This ad is spending $2,282/week at a $91 CPA with near-zero video engagement. Pause it for 7 days and monitor blended account CPA, ROAS, and spend pacing daily. If account metrics worsen in the first 3 days, reactivate — the ad may be contributing via the breakdown effect. If metrics hold or improve, keep it paused and reallocate that budget to 238 A | Still and 245 B | Still, which are the two highest-efficiency Meta ads this week.</div></div><div class="priority"><div class="priority-content"><strong>Run the 243 B | UGC pause test</strong>CPA of $163 on 2 orders from $326 spend is the worst conversion efficiency in the account. Pause for 7 days alongside the 267 C test and monitor the same blended metrics. The high CTR (3.24%) suggests the audience is clicking — check whether the landing page destination is correct and whether there&#39;s a post-click drop-off issue before concluding the creative is broken.</div></div><div class="priority"><div class="priority-content"><strong>Scale 238 A | Still and 245 B | Still</strong>These are the two Meta ads hitting or beating the $24 CPA target this week. 238 A is at $14 CPA on provisional data — test a budget increase to $200–$300 and monitor whether efficiency holds. 245 B is at $22.75 CPA with 8 orders and a bundle angle that&#39;s working. Both are worth pushing more budget toward, especially if the 267 C pause frees up ~$2,000/week in Meta budget.</div></div><div class="priority"><div class="priority-content"><strong>Review LP and upsell path for 274 - 3 | Still and 235 C | Still (Site-Level Flags)</strong>Both ads are converting but ROAS is compressed. For 274 - 3, check whether the hat landing page offers bundle or multi-unit upsells — single-PDP landing pages will keep AOV low. For 235 C, CVR appears to be the constraint despite above-average AOV; test a more direct product-to-cart path or a higher-converting LP variant.</div></div></div></div>
+  <div class="section"><h2>Next Week — Priorities</h2><div class="priorities-list"><div class="priority"><div class="priority-content"><strong>Run the 267 C | Still pause test immediately</strong>This ad is spending $2,282/week at a $91 CPA with near-zero video engagement. Pause it for 7 days and monitor blended account CPA, ROAS, and spend pacing daily. If account metrics worsen in the first 3 days, reactivate — the ad may be contributing via the breakdown effect. If metrics hold or improve, keep it paused and reallocate that budget to 238 A | Still and 245 B | Still, which are the two highest-efficiency Meta ads this week.</div></div><div class="priority"><div class="priority-content"><strong>Scale 238 A | Still and 245 B | Still</strong>These are the two Meta ads hitting or beating the $24 CPA target this week. 238 A is at $14 CPA on provisional data — test a budget increase to $200–$300 and monitor whether efficiency holds. 245 B is at $22.75 CPA with 8 orders and a bundle angle that&#39;s working. Both are worth pushing more budget toward, especially if the 267 C pause frees up ~$2,000/week in Meta budget.</div></div><div class="priority"><div class="priority-content"><strong>Review LP and upsell path for 274 - 3 | Still and 235 C | Still (Site-Level Flags)</strong>Both ads are converting but ROAS is compressed. For 274 - 3, check whether the hat landing page offers bundle or multi-unit upsells — single-PDP landing pages will keep AOV low. For 235 C, CVR appears to be the constraint despite above-average AOV; test a more direct product-to-cart path or a higher-converting LP variant.</div></div></div></div>
 
   <div class="footer">Generated by Mobius Digital • Data via Triple Whale (Triple Attribution, Lifetime) • Jul 6 – Jul 12, 2026</div>
 </div>
