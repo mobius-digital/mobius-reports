@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -206,40 +203,12 @@ body {
     
     <div class="summary-text">Blended CPA of $24 is above the $14 dynamic target, and blended ROAS of 1.86x is below the 2.5x target. The biggest drag this week is AOV — it dropped from $50 last week to $37, which compresses ROAS even when conversion volume holds. CVR improved 24% week over week, so the site is converting sessions at a better rate; the revenue shortfall is an order-value problem, not a traffic-quality problem.</div>
     
-      <h3 style="margin-top:24px;">Channel Breakdown</h3>
-      <table class="channel-table">
-        <thead><tr><th>Channel</th><th>Revenue</th><th>Spend</th><th>ROAS</th><th>CPA</th></tr></thead>
-        <tbody><tr><td>Facebook Ads</td><td>$1,920 <span class="channel-delta down">▼ 35.9%</span></td><td>$1,689 <span class="channel-delta down">▼ 8.5%</span></td><td>1.14x <span class="channel-delta down">▼ 30.0%</span></td><td>$49.66 <span class="channel-delta down">▲ 7.6%</span></td></tr><tr><td>Google Ads</td><td>$2,765 <span class="channel-delta down">▼ 11.0%</span></td><td>$934 <span class="channel-delta down">▼ 4.1%</span></td><td>2.96x <span class="channel-delta down">▼ 7.3%</span></td><td>$30.13 <span class="channel-delta down">▲ 33.1%</span></td></tr><tr><td>TikTok Ads</td><td>$0</td><td>$196</td><td>—</td><td>—</td></tr></tbody>
-      </table>
   </div>
 
-  
-    <div class="section">
-      <h2>Meta Overview</h2>
-      <div class="platform-overview">
-        <div class="po-grid">
-    <div class="po-metric">
-      <div class="po-metric-label">Spend</div>
-      <div><span class="po-metric-value">$1,689</span><span class="po-metric-delta down">↓ 8.5%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">ROAS</div>
-      <div><span class="po-metric-value">1.14x</span><span class="po-metric-delta down">↓ 30.0%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">CPA</div>
-      <div><span class="po-metric-value">$49.66</span><span class="po-metric-delta down">↑ 7.6%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">Avg Freq</div>
-      <div><span class="po-metric-value">2.4</span></div>
-    </div></div>
-        <div class="po-summary"><strong>Week summary:</strong> Meta is running broad prospecting across a large creative roster this week. Direct attributed ROAS is lower than last week (1.14x vs 1.62x), driven by a sharp AOV drop rather than a collapse in conversion volume — orders fell from 40 to 34 while spend dropped proportionally. Frequency at 2.4 is healthy; the audience pool is not saturated. The channel&#39;s role here is pipeline-filling; downstream attribution via branded search and retargeting is where much of the conversion credit lands.</div>
-      </div>
-    </div><div class="section"><h2>Meta — What&#39;s Working</h2>
-    <div class="ad-card winner">
+  <div class="section"><h2>Meta — What&#39;s Working</h2>
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Offer - 8 (Gamified - 1)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">Offer</span><span class="ad-tag review">8 (Gamified - 1) — WINNER</span></div>
         <div class="ad-links"><a href="https://fb.me/2l63G5CwrjcqyD9" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582743940266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$25.10</strong> Spend</span><span class="ad-metric"><strong>3.98x</strong> ROAS</span><span class="ad-metric"><strong>$12.55</strong> CPA</span><span class="ad-metric"><strong>1.4</strong> Frequency</span><span class="ad-metric"><strong>1.30%</strong> CTR</span></div>
@@ -258,9 +227,9 @@ body {
       <div class="insight-body">The gamified offer format is converting at the best efficiency in the Meta account this week — the combination of a direct offer mechanic and solid hold rate is the pattern to replicate in sibling creatives.</div>
     </div></div>
     </div>
-    <div class="ad-card winner">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">388-3 (388 | Gamified - 2)</span><span class="ad-tag winner">WINNER</span></div>
+        <div><span class="ad-name">388-3 (388 | Gamified</span><span class="ad-tag review">2) — WINNER</span></div>
         <div class="ad-links"><a href="https://fb.me/26AQPqWlF8tTYN6" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120248138893320266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$13.15</strong> Spend</span><span class="ad-metric"><strong>3.80x</strong> ROAS</span><span class="ad-metric"><strong>$13.15</strong> CPA</span><span class="ad-metric"><strong>1.8</strong> Frequency</span><span class="ad-metric"><strong>0.64%</strong> CTR</span></div>
@@ -279,9 +248,9 @@ body {
       <div class="insight-body">The 388 gamified static format is punching above its weight — worth testing more static variants in the Gamified - 2 adset to see if the format or the offer mechanic is driving the efficiency.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">352 A | UGC (Broad | 352)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">352 A | UGC (Broad | 352)</span><span class="ad-tag review">WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/255V9hbTdaOASy3" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120243115360050266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$302.86</strong> Spend</span><span class="ad-metric"><strong>0.78x</strong> ROAS</span><span class="ad-metric"><strong>$151.43</strong> CPA</span><span class="ad-metric"><strong>1.9</strong> Frequency</span><span class="ad-metric"><strong>2.07%</strong> CTR</span></div>
@@ -304,9 +273,9 @@ body {
       <div class="insight-body">The hook + hold combination on 352 A is the strongest in the broad prospecting pool — build sibling variants off the same opening creative pattern to test whether the format scales.</div>
     </div></div>
     </div>
-    <div class="ad-card working-as-tof">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">394 A | UGC (Broad | 394 - Hangover Free Sale)</span><span class="ad-tag working-as-tof">WORKING AS TOF</span></div>
+        <div><span class="ad-name">394 A | UGC (Broad | 394</span><span class="ad-tag review">Hangover Free Sale) — WORKING AS TOF</span></div>
         <div class="ad-links"><a href="https://fb.me/1Sk2gfWbexajhlL" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120248180706160266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$187.06</strong> Spend</span><span class="ad-metric"><strong>0.38x</strong> ROAS</span><span class="ad-metric"><strong>$93.53</strong> CPA</span><span class="ad-metric"><strong>1.7</strong> Frequency</span><span class="ad-metric"><strong>2.05%</strong> CTR</span></div>
@@ -329,9 +298,9 @@ body {
       <div class="insight-body">The hold and completion rates on 394 A are exceptional — whatever is happening in the middle of this video is working. Pull that section out as a standalone hook or use it as the opening of the next creative iteration.</div>
     </div></div>
     </div></div><div class="section"><h2>Meta — Ads to Review</h2>
-    <div class="ad-card critical">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Offer - 2 (Gamified - 1)</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
+        <div><span class="ad-name">Offer</span><span class="ad-tag review">2 (Gamified - 1) — UNDERPERFORMER</span></div>
         <div class="ad-links"><a href="https://fb.me/yyOjaiuvOpE9NFH" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582639020266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$278.12</strong> Spend</span><span class="ad-metric"><strong>0.75x</strong> ROAS</span><span class="ad-metric"><strong>$46.35</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>2.59%</strong> CTR</span></div>
