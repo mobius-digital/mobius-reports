@@ -61,7 +61,6 @@ body {
 
 .ad-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
 .ad-card.winner { border-left: 3px solid #10b981; }
-.ad-card.working-as-tof { border-left: 3px solid #10b981; }
 .ad-card.review { border-left: 3px solid #f59e0b; }
 .ad-card.critical { border-left: 3px solid #ef4444; }
 
@@ -69,7 +68,6 @@ body {
 .ad-name { font-size: 15px; font-weight: 600; color: #0f172a; }
 .ad-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 .ad-tag.winner { background: #d1fae5; color: #065f46; }
-.ad-tag.working-as-tof { background: transparent; color: #065f46; border: 1px solid #10b981; padding: 2px 7px; }
 .ad-tag.review { background: #fef3c7; color: #92400e; }
 .ad-tag.critical { background: #fee2e2; color: #991b1b; }
 
@@ -122,7 +120,9 @@ body {
 
 .footer { background: #f8fafc; padding: 20px 48px; text-align: center; font-size: 11px; color: #94a3b8; }
 
-/* Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused). */
+/* ============================================================
+   Iter 2: Doc-edit body styles (renderReportFromDocBody_ — unused).
+   ============================================================ */
 .doc-body { padding: 32px 48px; }
 .doc-body .doc-section { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
 .doc-body .doc-section:first-child { margin-top: 0; }
@@ -138,7 +138,12 @@ body {
 .doc-body a { color: #2563eb; text-decoration: none; }
 .doc-body a:hover { text-decoration: underline; }
 
-/* Iter 3: Free-form section default body styles. */
+/* ============================================================
+   Iter 3: Free-form section content. Rendered inside a standard
+   .section wrapper so the title chrome matches the rest of the
+   report; this class scopes the typography for the body content
+   below the section heading.
+   ============================================================ */
 .freeform-content { font-size: 14px; color: #334155; line-height: 1.6; }
 .freeform-content p { margin: 10px 0; }
 .freeform-content p:first-child { margin-top: 0; }
@@ -151,14 +156,6 @@ body {
 .freeform-content .freeform-table th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
 .freeform-content .freeform-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
 .freeform-content .freeform-table tr:last-child td { border-bottom: none; }
-
-/* Iter 4: spacing tweaks so styled blocks sit cleanly inside a freeform section */
-.freeform-content > .summary-text:first-child,
-.freeform-content > .snapshot-grid:first-child,
-.freeform-content > .ad-card:first-child,
-.freeform-content > .priorities-list:first-child { margin-top: 0; }
-.freeform-content > .snapshot-grid { margin-top: 12px; }
-.freeform-content > .priorities-list { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -206,40 +203,12 @@ body {
     
     <div class="summary-text">Blended CPA of $20 is right at the dynamic target of $14 — wait, the dynamic target CPA this week is $14 (39% of True AOV $35). Blended CPA of $20 is above the $14 dynamic target, and blended ROAS of 2.13x is below the 2.5x blended target. Orders are up 13% week-over-week (123 vs 109) but AOV dropped sharply from $42 to $35, pulling both ROAS and the dynamic CPA target down with it — the account is converting more frequently at lower basket sizes.</div>
     
-      <h3 style="margin-top:24px;">Channel Breakdown</h3>
-      <table class="channel-table">
-        <thead><tr><th>Channel</th><th>Revenue</th><th>Spend</th><th>ROAS</th><th>CPA</th></tr></thead>
-        <tbody><tr><td>Facebook Ads</td><td>$1,284 <span class="channel-delta down">▼ 41.6%</span></td><td>$1,475 <span class="channel-delta down">▼ 2.3%</span></td><td>0.87x <span class="channel-delta down">▼ 40.1%</span></td><td>$52.69 <span class="channel-delta down">▲ 18.5%</span></td></tr><tr><td>Google Ads</td><td>$2,353 <span class="channel-delta down">▼ 2.9%</span></td><td>$955 <span class="channel-delta up">▲ 17.1%</span></td><td>2.46x <span class="channel-delta down">▼ 17.1%</span></td><td>$35.36 <span class="channel-delta down">▲ 30.1%</span></td></tr><tr><td>TikTok Ads</td><td>$0</td><td>$38</td><td>—</td><td>—</td></tr></tbody>
-      </table>
   </div>
 
-  
-    <div class="section">
-      <h2>Meta Overview</h2>
-      <div class="platform-overview">
-        <div class="po-grid">
-    <div class="po-metric">
-      <div class="po-metric-label">Spend</div>
-      <div><span class="po-metric-value">$1,475</span><span class="po-metric-delta down">↓ 2.3%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">ROAS</div>
-      <div><span class="po-metric-value">0.87x</span><span class="po-metric-delta down">↓ 40.1%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">CPA</div>
-      <div><span class="po-metric-value">$52.69</span><span class="po-metric-delta down">↑ 18.5%</span></div>
-    </div>
-    <div class="po-metric">
-      <div class="po-metric-label">Avg Freq</div>
-      <div><span class="po-metric-value">3.3</span></div>
-    </div></div>
-        <div class="po-summary"><strong>Week summary:</strong> Meta is running broad prospecting across a large creative pool with account-level frequency at 3.3 — the audience is being served ads repeatedly, which is a fatigue signal worth watching. Direct attributed ROAS dropped from 1.45x last week to 0.87x this week, driven by a mix of lower AOV and fewer attributed orders (28 vs 34). Meta&#39;s role here is primarily pipeline-filling; direct attribution understates its contribution, but the frequency trend and CPA deterioration warrant a closer look at which creatives are carrying weight.</div>
-      </div>
-    </div><div class="section"><h2>Meta — What&#39;s Working</h2>
+  <div class="section"><h2>Meta — What&#39;s Working</h2>
     <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">Offer - 2</span><span class="ad-tag review">STRONGEST SIGNALS</span></div>
+        <div><span class="ad-name">Offer</span><span class="ad-tag review">2 — STRONGEST SIGNALS</span></div>
         <div class="ad-links"><a href="https://fb.me/29w17ioc9EKMJxf" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120246582639020266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$123.04</strong> Spend</span><span class="ad-metric"><strong>1.86x</strong> ROAS</span><span class="ad-metric"><strong>$20.51</strong> CPA</span><span class="ad-metric"><strong>1.2</strong> Frequency</span><span class="ad-metric"><strong>4.26%</strong> CTR</span></div>
@@ -308,9 +277,9 @@ body {
       <div class="insight-body">This ad may be a hidden TOF contributor whose conversions Meta is crediting downstream, or it may be a static creative that genuinely isn&#39;t landing — CTR below account average and no hook/hold data make it impossible to tell from in-platform metrics alone. The test: pause for 7 days and monitor blended account CPA, ROAS, and spend pacing, plus the retargeting ads in the same funnel. If the account gets worse or downstream ads degrade after the pause, this ad was carrying weight that wasn&#39;t visible at the ad level — reactivate it. If account metrics hold or improve, the ad was genuinely underperforming and the pause sticks.</div>
     </div></div>
     </div>
-    <div class="ad-card critical">
+    <div class="ad-card review">
       <div class="ad-header">
-        <div><span class="ad-name">400 - 4</span><span class="ad-tag critical">UNDERPERFORMER</span></div>
+        <div><span class="ad-name">400</span><span class="ad-tag review">4 — UNDERPERFORMER</span></div>
         <div class="ad-links"><a href="https://fb.me/1T4Pnk5qaHvAwbU" target="_blank" rel="noopener">View ad<span class="ad-link-icon">↗</span></a><span class="ad-link-sep">·</span><a href="https://adsmanager.facebook.com/adsmanager/manage/ads?act=1033194534145987&amp;selected_ad_ids=120248594062790266" target="_blank" rel="noopener">Open in Ads Manager<span class="ad-link-icon">↗</span></a></div>
       </div>
       <div class="ad-metrics"><span class="ad-metric"><strong>$212.88</strong> Spend</span><span class="ad-metric"><strong>0.77x</strong> ROAS</span><span class="ad-metric"><strong>$106.44</strong> CPA</span><span class="ad-metric"><strong>1.9</strong> Frequency</span><span class="ad-metric"><strong>1.20%</strong> CTR</span></div>
